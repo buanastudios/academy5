@@ -1,0 +1,911 @@
+/* ==========================================================================
+   BUANA ACADEMY - ENFORCED & OPTIMIZED LANDSCAPE CSS SYSTEM
+   Engineered for Widescreen, Tablets, Desktop & Landscape Smartphones (16:9, 16:10, 21:9)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LANDSCAPE ENFORCEMENT & ROTATION BARRIER OVERLAY
+   -------------------------------------------------------------------------- */
+.landscape-enforce-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.landscape-enforce-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.landscape-barrier-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2rem;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 4px var(--lego-yellow);
+  position: relative;
+  overflow: hidden;
+  animation: barrierCardPop 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes barrierCardPop {
+  0% { transform: scale(0.8) translateY(20px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* 3D Animated Rotating Device & Lego Stud Graphic */
+.rotate-animation-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotate-phone-icon {
+  width: 50px;
+  height: 84px;
+  background: #0f172a;
+  border-radius: 12px;
+  border: 3px solid #38bdf8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  box-shadow: 0 10px 25px rgba(0, 108, 183, 0.4);
+  animation: phoneRotateLoop 2.8s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.rotate-phone-screen {
+  width: 100%;
+  height: 56px;
+  background: #1e293b;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--lego-yellow);
+}
+
+.rotate-phone-notch {
+  width: 14px;
+  height: 3px;
+  background: #64748b;
+  border-radius: 2px;
+}
+
+.rotate-phone-home {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #64748b;
+}
+
+.rotate-arrow-indicator {
+  position: absolute;
+  font-size: 2.2rem;
+  color: var(--lego-yellow);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+  animation: arrowPulse 1.4s infinite ease-in-out;
+}
+
+@keyframes phoneRotateLoop {
+  0%, 15% { transform: rotate(0deg) scale(1); }
+  45%, 75% { transform: rotate(90deg) scale(1.08); }
+  90%, 100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes arrowPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.15) rotate(15deg); opacity: 1; }
+}
+
+.landscape-barrier-title {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-lego);
+}
+
+.landscape-barrier-text {
+  font-size: 0.95rem;
+  color: var(--ios-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.landscape-barrier-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.landscape-badge-mode {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fef08a;
+  color: #854d0e;
+  border: 1.5px solid #facc15;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-bottom: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. VIRTUAL CSS LANDSCAPE ROTATION (FALLBACK FOR PORTRAIT-LOCKED PHONES)
+   -------------------------------------------------------------------------- */
+body.virtual-landscape-active {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+body.virtual-landscape-active #landscape-viewport-root {
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --------------------------------------------------------------------------
+   3. ULTRA-SLIM LANDSCAPE HEADER & NAVIGATION
+   -------------------------------------------------------------------------- */
+.landscape-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 2px solid var(--ios-border);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+.landscape-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  gap: 0.85rem;
+}
+
+.landscape-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.landscape-brand-box {
+  width: 34px;
+  height: 34px;
+  background: var(--lego-red);
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 3px 0 var(--lego-red-shadow);
+}
+
+.landscape-brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.landscape-brand-name {
+  font-family: var(--font-lego);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
+}
+
+.landscape-brand-sub {
+  font-size: 0.72rem;
+  color: var(--lego-blue);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Horizontal Scrollable Lego Menu Bricks */
+.landscape-nav-links-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 2px;
+}
+
+.landscape-nav-links-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.landscape-nav-brick {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-lego);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.38rem 0.72rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: transform var(--transition-snappy), box-shadow var(--transition-snappy);
+}
+
+.landscape-nav-brick::before, .landscape-nav-brick::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 3px;
+  border-radius: 2px 2px 0 0;
+  background: inherit;
+  box-shadow: inset 0 -1px 1px rgba(0,0,0,0.25);
+}
+.landscape-nav-brick::before { left: 22%; }
+.landscape-nav-brick::after { right: 22%; }
+
+.landscape-nav-brick.red { background: var(--lego-red); color: #fff; box-shadow: 0 2px 0 var(--lego-red-shadow); }
+.landscape-nav-brick.blue { background: var(--lego-blue); color: #fff; box-shadow: 0 2px 0 var(--lego-blue-shadow); }
+.landscape-nav-brick.yellow { background: var(--lego-yellow); color: #0f172a; box-shadow: 0 2px 0 var(--lego-yellow-shadow); }
+.landscape-nav-brick.green { background: var(--lego-green); color: #fff; box-shadow: 0 2px 0 var(--lego-green-shadow); }
+.landscape-nav-brick.purple { background: var(--lego-purple); color: #fff; box-shadow: 0 2px 0 var(--lego-purple-shadow); }
+.landscape-nav-brick.orange { background: var(--lego-orange); color: #fff; box-shadow: 0 2px 0 var(--lego-orange-shadow); }
+
+.landscape-nav-brick:hover { transform: translateY(-1px); }
+.landscape-nav-brick:active { transform: translateY(2px) !important; box-shadow: none; }
+
+.landscape-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.btn-landscape-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1.5px solid #cbd5e1;
+  padding: 0.38rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-landscape-mode-toggle:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO SECTION WIDESCREEN & LANDSCAPE PROPORTIONS
+   -------------------------------------------------------------------------- */
+.landscape-hero {
+  position: relative;
+  padding: 2rem 0 2.5rem;
+  background: linear-gradient(180deg, rgba(224, 242, 254, 0.45) 0%, rgba(246, 248, 252, 0) 100%);
+  overflow: hidden;
+  border-bottom: 2px dashed #cbd5e1;
+}
+
+.landscape-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.landscape-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.landscape-hero-title {
+  font-size: 2.25rem;
+  line-height: 1.18;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.landscape-hero-lead {
+  font-size: 0.98rem;
+  color: var(--ios-text-secondary);
+  line-height: 1.55;
+}
+
+.landscape-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.landscape-trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0f172a;
+  box-shadow: var(--shadow-ios-sm);
+}
+
+.landscape-trust-chip span.icon {
+  color: var(--lego-green);
+  font-weight: 900;
+}
+
+.landscape-hero-cta-box {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--ios-border);
+  box-shadow: var(--shadow-ios-card);
+  margin-top: 0.5rem;
+}
+
+.landscape-price-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.landscape-price-num {
+  font-family: var(--font-lego);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--lego-red);
+  line-height: 1.1;
+}
+
+.landscape-price-sub {
+  font-size: 0.76rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Hero Visual Frame with Lego Studs */
+.landscape-hero-visual {
+  position: relative;
+}
+
+.landscape-hero-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 3px solid #0f172a;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12), 0 6px 0 #0f172a;
+  overflow: hidden;
+}
+
+.landscape-hero-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.landscape-floating-badge {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid #0f172a;
+  border-radius: var(--radius-md);
+  padding: 0.45rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  z-index: 5;
+}
+
+.landscape-badge-top-right {
+  top: 12px;
+  right: 12px;
+}
+
+.landscape-badge-bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   5. COMPACT 4-COLUMN HORIZONTAL KEUNGGULAN (CORE VALUES)
+   -------------------------------------------------------------------------- */
+.landscape-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.landscape-feature-card {
+  background: #ffffff;
+  border: 2px solid var(--ios-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  box-shadow: var(--shadow-ios-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landscape-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-ios-elevated);
+  border-color: var(--lego-blue);
+}
+
+.landscape-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.landscape-feature-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.landscape-feature-card h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.landscape-feature-card p {
+  font-size: 0.84rem;
+  color: var(--ios-text-secondary);
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   6. CURRICULUM SPOTLIGHT 2-COLUMN WIDESCREEN MATRIX
+   -------------------------------------------------------------------------- */
+.landscape-spotlight-box {
+  background: #ffffff;
+  border: 3px solid #0f172a;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08), 0 8px 0 #0f172a;
+  overflow: hidden;
+}
+
+.landscape-spotlight-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: stretch;
+}
+
+.landscape-spotlight-media {
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border-right: 2px solid var(--ios-border);
+}
+
+.landscape-spotlight-media img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08));
+}
+
+.landscape-spotlight-content {
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+.landscape-weeks-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.landscape-week-card {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.landscape-week-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--lego-red);
+  color: #fff;
+  font-family: var(--font-lego);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.landscape-week-card p {
+  font-size: 0.82rem;
+  color: var(--ios-text-secondary);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   7. 3-COLUMN PROGRAM CARDS FOR LANDSCAPE
+   -------------------------------------------------------------------------- */
+.landscape-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.landscape-program-card {
+  background: #ffffff;
+  border: 2.5px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-ios-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.landscape-program-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--lego-blue);
+  box-shadow: var(--shadow-ios-elevated);
+}
+
+.landscape-program-card.featured {
+  border-color: var(--lego-yellow);
+  box-shadow: 0 12px 30px rgba(255, 213, 0, 0.25);
+}
+
+.landscape-prog-img-box {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+
+.landscape-prog-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.landscape-prog-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.6rem;
+}
+
+.landscape-prog-title {
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+.landscape-prog-desc {
+  font-size: 0.84rem;
+  color: var(--ios-text-secondary);
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   8. SCHEDULE & PRAYER TRANSPARENCY
+   -------------------------------------------------------------------------- */
+.landscape-prayer-bar {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: 0 10px 25px rgba(6, 78, 59, 0.25);
+  margin-bottom: 1.5rem;
+}
+
+.landscape-prayer-text h4 {
+  color: #a7f3d0;
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.landscape-prayer-text p {
+  color: #e2e8f0;
+  font-size: 0.86rem;
+  max-width: 650px;
+}
+
+.landscape-prayer-pills-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.landscape-prayer-pill {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.landscape-prayer-pill-title {
+  font-size: 0.74rem;
+  color: #6ee7b7;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.landscape-prayer-pill-time {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: var(--font-lego);
+}
+
+.landscape-sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. REGISTRATION 2-COLUMN WIDESCREEN SPLIT
+   -------------------------------------------------------------------------- */
+.landscape-reg-wrapper {
+  background: #ffffff;
+  border: 3px solid #0f172a;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08), 0 8px 0 #0f172a;
+  padding: 2rem;
+}
+
+.landscape-reg-split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.25rem;
+  align-items: start;
+}
+
+.landscape-reg-pitch {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.landscape-bank-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.landscape-bank-card {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.landscape-bank-card:hover {
+  border-color: var(--lego-blue);
+  background: #f0f9ff;
+}
+
+.landscape-bank-card.selected {
+  border-color: var(--lego-blue);
+  background: #e0f2fe;
+  box-shadow: 0 0 0 2px var(--lego-blue);
+}
+
+.landscape-bank-card-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--lego-blue);
+}
+
+.landscape-bank-card-num {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0.15rem 0;
+}
+
+.landscape-form-card {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. LANDSCAPE TICKET MODAL & FLOATING DOCK
+   -------------------------------------------------------------------------- */
+.landscape-modal-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem 2rem;
+  max-width: 620px;
+  width: 92%;
+  max-height: 88vh;
+  overflow-y: auto;
+  border: 3px solid #0f172a;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.landscape-ticket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem 1rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.landscape-dock-bar {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  z-index: 120;
+}
+
+.landscape-dock-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-full);
+  transition: background 0.15s ease;
+}
+
+.landscape-dock-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.landscape-dock-cta {
+  background: var(--lego-yellow);
+  color: #0f172a;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-lego);
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: 0 3px 0 var(--lego-yellow-shadow);
+}
+
+/* --------------------------------------------------------------------------
+   11. RESPONSIVE LANDSCAPE TUNING (MOBILE LANDSCAPE VS WIDESCREEN)
+   -------------------------------------------------------------------------- */
+@media (max-height: 520px) and (orientation: landscape) {
+  .landscape-hero {
+    padding: 1.25rem 0 1.5rem;
+  }
+  .landscape-hero-title {
+    font-size: 1.65rem;
+  }
+  .landscape-hero-card img {
+    height: 190px;
+  }
+  .landscape-spotlight-content {
+    padding: 1.25rem 1.5rem;
+  }
+  .landscape-weeks-matrix {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .landscape-week-card {
+    padding: 0.5rem 0.65rem;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .landscape-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .landscape-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .landscape-programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  .landscape-sessions-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  .landscape-reg-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
