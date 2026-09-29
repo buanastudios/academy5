@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://academy.buana.studio/sitemap.xml

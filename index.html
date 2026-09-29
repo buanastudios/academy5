@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Buana Academy | Studio Robotik, Bahasa, & Beladiri Bandung</title>
+  <meta name="title" content="Buana Academy | Studio Robotik, Bahasa, & Beladiri Bandung">
+  <meta name="description" content="Pusat pengayaan minat, logika, bahasa, dan beladiri di Bandung. Tersedia kelas Robotik, English, Basa Sunda, BJJ, dan Aikido dengan pilihan sesi pagi dan sore.">
+  <meta name="author" content="Buana Studio (buana.studio)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://academy.buana.studio/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://academy.buana.studio/">
+  <meta property="og:title" content="Buana Academy | Studio Robotik, Bahasa, & Beladiri Bandung">
+  <meta property="og:description" content="Pusat pengayaan minat, bahasa, dan beladiri di Bandung. Pilihan sesi pagi, sore, dan akhir pekan untuk anak hingga umum.">
+  <meta property="og:image" content="https://academy.buana.studio/assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Buana Academy">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://academy.buana.studio/">
+  <meta name="twitter:title" content="Buana Academy | Studio Robotik, Bahasa, & Beladiri Bandung">
+  <meta name="twitter:description" content="Pusat pengayaan minat, bahasa, dan beladiri di Bandung. Pilihan sesi pagi, sore, dan akhir pekan.">
+  <meta name="twitter:image" content="https://academy.buana.studio/assets/og-cover.jpg">
+
+  <!-- Geo Meta Tags for Bandung Local Discovery -->
+  <meta name="geo.region" content="ID-JB">
+  <meta name="geo.placename" content="Bandung, Jawa Barat, Indonesia">
+  <meta name="geo.position" content="-6.9389;107.7122">
+  <meta name="ICBM" content="-6.9389, 107.7122">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230f172a'/><path d='M28 26h24a18 18 0 0 1 0 36H28z' fill='none' stroke='%2338bdf8' stroke-width='8'/><path d='M28 50h26a18 18 0 0 1 0 36H28z' fill='none' stroke='%23818cf8' stroke-width='8'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(8px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.6' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles for Studio Aesthetic -->
+  <style>
+    .bg-grid-pattern {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+    
+    .radial-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12), rgba(99, 102, 241, 0.05) 45%, transparent 70%);
+    }
+
+    .program-card {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .program-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .filter-btn {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .filter-btn.active {
+      background-color: #ffffff;
+      color: #090d16;
+      box-shadow: 0 4px 14px 0 rgba(255, 255, 255, 0.18);
+    }
+    
+    .filter-btn:not(.active) {
+      background-color: rgba(30, 41, 59, 0.7);
+      color: #94a3b8;
+    }
+    
+    .filter-btn:not(.active):hover {
+      background-color: rgba(51, 65, 85, 0.8);
+      color: #f1f5f9;
+    }
+
+    .badge-glow {
+      position: relative;
+      overflow: hidden;
+    }
+    .badge-glow::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+      animation: shimmer 4s infinite;
+    }
+    @keyframes shimmer {
+      0% { left: -100%; }
+      30%, 100% { left: 100%; }
+    }
+  </style>
+
+  <!-- Unified Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["EducationalOrganization", "LocalBusiness"],
+        "@id": "https://academy.buana.studio/#organization",
+        "name": "Buana Academy",
+        "alternateName": "Buana Academy Studio Hub",
+        "url": "https://academy.buana.studio/",
+        "logo": "https://academy.buana.studio/assets/logo.png",
+        "description": "Studio pengembangan minat, bahasa, logika, dan beladiri berbasis sesi mingguan di Bandung untuk anak, remaja, hingga umum.",
+        "email": "academy@buana.studio",
+        "telephone": "+6285117758517",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Bunga Mas No 6, RT 7 RW 1, Mekar Mulya, Panyileukan",
+          "addressLocality": "Kota Bandung",
+          "addressRegion": "Jawa Barat",
+          "postalCode": "40614",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -6.9389,
+          "longitude": 107.7122
+        },
+        "sameAs": [
+          "https://buana.studio"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://academy.buana.studio/#website",
+        "url": "https://academy.buana.studio/",
+        "name": "Buana Academy",
+        "publisher": {
+          "@id": "https://academy.buana.studio/#organization"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Pilihan Program Studio Buana Academy",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Robotics & Creative STEM",
+            "url": "https://academy.buana.studio/robotic"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "English Speaking Club",
+            "url": "https://academy.buana.studio/english"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Basa Sunda & Budaya",
+            "url": "https://academy.buana.studio/sundanese"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Brazilian Jiu-Jitsu (BJJ)",
+            "url": "https://academy.buana.studio/jiujitsu"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Aikido Dojo",
+            "url": "https://academy.buana.studio/aikido"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-[#090d16] text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white min-h-screen flex flex-col relative overflow-x-hidden">
+
+  <!-- Atmospheric Background Elements -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none opacity-60 z-0"></div>
+  <div class="fixed top-0 left-0 right-0 h-[640px] radial-glow pointer-events-none z-0"></div>
+  <div class="fixed top-1/3 -left-48 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+  <div class="fixed top-1/2 -right-48 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- Content Wrapper -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- 1. NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#090d16]/80 border-b border-slate-800/80 transition-colors">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        
+        <a href="https://academy.buana.studio/" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg p-1">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/30 transition-shadow">
+            <div class="w-full h-full bg-[#090d16] rounded-[10px] flex items-center justify-center">
+              <span class="font-display font-bold text-base bg-gradient-to-r from-cyan-400 to-indigo-300 bg-clip-text text-transparent">BA</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-display font-bold text-lg tracking-tight text-white group-hover:text-cyan-300 transition-colors">Buana Academy</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium tracking-wide bg-slate-800/90 text-slate-300 border border-slate-700/60 badge-glow">
+              Studio Hub
+            </span>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-3 sm:gap-4">
+          <div class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs text-slate-300">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Bandung, Jawa Barat</span>
+          </div>
+
+          <a href="https://wa.me/6285117758517?text=Halo%20Buana%20Academy,%20saya%20tertarik%20tanya%20jadwal%20dan%20informasi%20sesi%20studio." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white shadow-md shadow-emerald-950/40 hover:shadow-emerald-900/60 active:scale-95 transition-all duration-150">
+            <i data-lucide="message-circle" class="w-4 h-4 text-white"></i>
+            <span>Konsultasi / Tanya Sesi</span>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+
+      <!-- 2. HERO SECTION -->
+      <section class="pt-12 pb-10 sm:pt-18 sm:pb-14 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/70 text-xs sm:text-sm text-slate-200 mb-6 shadow-sm badge-glow">
+          <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse-subtle"></span>
+          <span class="font-medium text-slate-300">Studio Keterampilan, Bahasa & Beladiri</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-cyan-400 font-semibold">Sesi Pagi & Sore</span>
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-[1.18] sm:leading-[1.15]">
+          Fokus Mengasah <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">Minat, Logika,</span> dan <span class="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">Karakter</span>.
+        </h1>
+
+        <p class="mt-5 text-base sm:text-lg md:text-xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed font-normal">
+          Bukan sekolah formal, melainkan studio aktivitas mingguan dengan jadwal fleksibel. Pilih studio yang ingin ditekuni putra-putri Anda — dari teknologi terapan hingga disiplin fisik.
+        </p>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto text-left">
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0 text-xl">
+              🌅
+            </div>
+            <div>
+              <div class="text-xs font-bold text-amber-300 tracking-wide uppercase">Sesi Pagi</div>
+              <div class="text-xs text-slate-300 mt-0.5">Homeschool & Usia Dini</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0 text-xl">
+              🌇
+            </div>
+            <div>
+              <div class="text-xs font-bold text-indigo-300 tracking-wide uppercase">Sesi Sore</div>
+              <div class="text-xs text-slate-300 mt-0.5">Sepulang Sekolah</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 text-xl">
+              🗓️
+            </div>
+            <div>
+              <div class="text-xs font-bold text-emerald-300 tracking-wide uppercase">Akhir Pekan</div>
+              <div class="text-xs text-slate-300 mt-0.5">Kelas Intensif Sabtu-Ahad</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 3. FILTERABLE PROGRAM DIRECTORY -->
+      <section id="programs" class="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 border-b border-slate-800/80">
+          <div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-2.5">
+              <span>Pilihan Studio & Program</span>
+              <span id="active-count-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-cyan-400 border border-slate-700 font-mono">5 Studio</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Eksplorasi studio sesuai fokus minat dan tahapan tumbuh kembang.</p>
+          </div>
+
+          <div class="inline-flex p-1 rounded-2xl bg-slate-900/90 border border-slate-800 w-full sm:w-auto overflow-x-auto" role="tablist" aria-label="Filter Kategori Studio">
+            <button type="button" 
+                    data-filter="all" 
+                    class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap focus:outline-none"
+                    role="tab" 
+                    aria-selected="true">
+              Semua Kelas
+            </button>
+            <button type="button" 
+                    data-filter="tech-lang" 
+                    class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap focus:outline-none"
+                    role="tab" 
+                    aria-selected="false">
+              Teknologi & Bahasa
+            </button>
+            <button type="button" 
+                    data-filter="martial-character" 
+                    class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap focus:outline-none"
+                    role="tab" 
+                    aria-selected="false">
+              Beladiri & Karakter
+            </button>
+          </div>
+        </div>
+
+        <!-- 5 Cards Grid -->
+        <div id="programs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
+
+          <!-- CARD 1: Robotics -->
+          <article data-category="tech-lang" class="program-card group flex flex-col justify-between rounded-3xl bg-slate-900/70 border border-slate-800/90 hover:border-cyan-500/50 hover:bg-slate-900/90 p-6 sm:p-7 shadow-xl shadow-black/30 backdrop-blur-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/70 text-cyan-300 border border-cyan-800/60">
+                  <i data-lucide="cpu" class="w-3.5 h-3.5 text-cyan-400"></i>
+                  Teknologi
+                </span>
+                <span class="text-xs text-slate-400 font-mono">01</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                Robotics & Creative STEM
+              </h3>
+              <p class="mt-3 text-sm text-slate-300/90 leading-relaxed">
+                Bangun nalar komputasi, mekanik sederhana, dan rakit proyek nyata setiap pekan.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Usia 7–15 Thn</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Pagi & Sore</span>
+                <span class="px-2.5 py-1 rounded-lg bg-cyan-950/40 border border-cyan-800/40 text-xs text-cyan-300 font-medium">Kits Provided</span>
+              </div>
+            </div>
+            <div class="mt-7 pt-5 border-t border-slate-800/80">
+              <a href="https://academy.buana.studio/robotic" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-cyan-600 text-white font-semibold text-sm transition-all duration-200 group-hover:shadow-lg group-hover:shadow-cyan-900/40">
+                <span>Buka Studio Robotik</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 2: English -->
+          <article data-category="tech-lang" class="program-card group flex flex-col justify-between rounded-3xl bg-slate-900/70 border border-slate-800/90 hover:border-emerald-500/50 hover:bg-slate-900/90 p-6 sm:p-7 shadow-xl shadow-black/30 backdrop-blur-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/70 text-emerald-300 border border-emerald-800/60">
+                  <i data-lucide="message-square" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  Bahasa
+                </span>
+                <span class="text-xs text-slate-400 font-mono">02</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">
+                English Speaking Club
+              </h3>
+              <p class="mt-3 text-sm text-slate-300/90 leading-relaxed">
+                Melatih keberanian bicara, interaksi aktif, dan presentasi gagasan tanpa rasa takut salah.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Anak & Remaja</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Pagi & Sore</span>
+                <span class="px-2.5 py-1 rounded-lg bg-emerald-950/40 border border-emerald-800/40 text-xs text-emerald-300 font-medium">Small Group</span>
+              </div>
+            </div>
+            <div class="mt-7 pt-5 border-t border-slate-800/80">
+              <a href="https://academy.buana.studio/english" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-emerald-600 text-white font-semibold text-sm transition-all duration-200 group-hover:shadow-lg group-hover:shadow-emerald-900/40">
+                <span>Buka Studio English</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 3: Basa Sunda -->
+          <article data-category="tech-lang" class="program-card group flex flex-col justify-between rounded-3xl bg-slate-900/70 border border-slate-800/90 hover:border-amber-500/50 hover:bg-slate-900/90 p-6 sm:p-7 shadow-xl shadow-black/30 backdrop-blur-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-orange-500 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-950/70 text-amber-300 border border-amber-800/60">
+                  <i data-lucide="book-open" class="w-3.5 h-3.5 text-amber-400"></i>
+                  Bahasa & Budaya
+                </span>
+                <span class="text-xs text-slate-400 font-mono">03</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">
+                Basa Sunda & Budaya
+              </h3>
+              <p class="mt-3 text-sm text-slate-300/90 leading-relaxed">
+                Pendampingan muatan lokal, tatakrama, serta undak-usuk basa Sunda yang aplikatif dan santun.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Usia Sekolah</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Pagi & Sore</span>
+                <span class="px-2.5 py-1 rounded-lg bg-amber-950/40 border border-amber-800/40 text-xs text-amber-300 font-medium">Pendampingan Sekolah</span>
+              </div>
+            </div>
+            <div class="mt-7 pt-5 border-t border-slate-800/80">
+              <a href="https://academy.buana.studio/sundanese" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-amber-600 text-white font-semibold text-sm transition-all duration-200 group-hover:shadow-lg group-hover:shadow-amber-900/40">
+                <span>Buka Studio Basa Sunda</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 4: Brazilian Jiu-Jitsu -->
+          <article data-category="martial-character" class="program-card group flex flex-col justify-between rounded-3xl bg-slate-900/70 border border-slate-800/90 hover:border-rose-500/50 hover:bg-slate-900/90 p-6 sm:p-7 shadow-xl shadow-black/30 backdrop-blur-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 to-red-600 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-950/70 text-rose-300 border border-rose-800/60">
+                  <i data-lucide="shield" class="w-3.5 h-3.5 text-rose-400"></i>
+                  Beladiri
+                </span>
+                <span class="text-xs text-slate-400 font-mono">04</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-white group-hover:text-rose-300 transition-colors">
+                Brazilian Jiu-Jitsu (BJJ)
+              </h3>
+              <p class="mt-3 text-sm text-slate-300/90 leading-relaxed">
+                Bela diri berbasis ungkitan dan pertarungan bawah (ground game) yang aman, taktis, dan melatih resiliensi.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Kids & Teens</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Tatami Mat</span>
+                <span class="px-2.5 py-1 rounded-lg bg-rose-950/40 border border-rose-800/40 text-xs text-rose-300 font-medium">Sesi Pagi & Sore</span>
+              </div>
+            </div>
+            <div class="mt-7 pt-5 border-t border-slate-800/80">
+              <a href="https://academy.buana.studio/jiujitsu" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-rose-600 text-white font-semibold text-sm transition-all duration-200 group-hover:shadow-lg group-hover:shadow-rose-900/40">
+                <span>Buka Studio BJJ</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 5: Aikido Dojo -->
+          <article data-category="martial-character" class="program-card group flex flex-col justify-between rounded-3xl bg-slate-900/70 border border-slate-800/90 hover:border-indigo-500/50 hover:bg-slate-900/90 p-6 sm:p-7 shadow-xl shadow-black/30 backdrop-blur-sm relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-950/70 text-indigo-300 border border-indigo-800/60">
+                  <i data-lucide="flame" class="w-3.5 h-3.5 text-indigo-400"></i>
+                  Beladiri
+                </span>
+                <span class="text-xs text-slate-400 font-mono">05</span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                Aikido Dojo
+              </h3>
+              <p class="mt-3 text-sm text-slate-300/90 leading-relaxed">
+                Seni beladiri tradisional yang memadukan kelembutan gerak, pengalihan tenaga lawan, dan ketenangan mental.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Anak & Umum</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium">Fokus Mental</span>
+                <span class="px-2.5 py-1 rounded-lg bg-indigo-950/40 border border-indigo-800/40 text-xs text-indigo-300 font-medium">Sesi Pagi & Sore</span>
+              </div>
+            </div>
+            <div class="mt-7 pt-5 border-t border-slate-800/80">
+              <a href="https://academy.buana.studio/aikido" class="inline-flex items-center justify-between w-full px-4 py-3 rounded-xl bg-slate-800 hover:bg-indigo-600 text-white font-semibold text-sm transition-all duration-200 group-hover:shadow-lg group-hover:shadow-indigo-900/40">
+                <span>Buka Studio Aikido</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- 4. TRUST & FACILITY BAR -->
+      <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950 border border-slate-800 p-8 sm:p-12 relative overflow-hidden">
+          
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Komitmen & Standar Belajar</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1.5 tracking-tight">
+              Standar Studio Buana Academy
+            </h2>
+            <p class="text-sm text-slate-400 mt-2">
+              Pengalaman belajar yang dirancang khusus untuk kenyamanan anak, fokus instruktur, dan ketenangan orang tua.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors">
+              <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4">
+                <i data-lucide="users" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">Maksimal 6–8 Peserta per Sesi</h3>
+              <p class="mt-2 text-xs sm:text-sm text-slate-300/80 leading-relaxed">
+                Pendampingan intensif & personal. Setiap anak mendapatkan perhatian langsung dari instruktur tanpa kelas yang berdesakan.
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">Trial Class Terbuka</h3>
+              <p class="mt-2 text-xs sm:text-sm text-slate-300/80 leading-relaxed">
+                Coba sesi perdana sebelum registrasi penuh. Pastikan kecocokan minat dan kenyamanan si kecil dengan suasana studio.
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+                <i data-lucide="calendar" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display text-lg font-bold text-white">Jadwal Fleksibel</h3>
+              <p class="mt-2 text-xs sm:text-sm text-slate-300/80 leading-relaxed">
+                Tersedia pilihan slot pagi (homeschooling) dan sore/akhir pekan untuk siswa sekolah reguler dengan toleransi waktu sholat.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+              <div class="text-sm font-semibold text-white">Ingin Menyesuaikan Jadwal Khusus atau Private Group?</div>
+              <div class="text-xs text-slate-400 mt-0.5">Diskusikan kebutuhan komunitas homeschooling atau kelompok privat Anda bersama kami.</div>
+            </div>
+            <a href="https://wa.me/6285117758517?text=Halo%20Buana%20Academy,%20saya%20ingin%20konsultasi%20jadwal%20khusus%20/%20trial%20class." 
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-semibold border border-slate-700/80 transition-colors whitespace-nowrap">
+              <span>Hubungi Pengelola Studio</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-cyan-400"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 5. FOOTER -->
+    <footer class="mt-auto border-t border-slate-800/90 bg-[#060910] text-slate-400 text-xs">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+          
+          <div class="md:col-span-2 space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-600 p-0.5">
+                <div class="w-full h-full bg-[#090d16] rounded-[6px] flex items-center justify-center">
+                  <span class="font-display font-bold text-xs text-cyan-400">BA</span>
+                </div>
+              </div>
+              <span class="font-display font-bold text-base text-white tracking-tight">Buana Academy</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed max-w-md">
+              Studio Pengembangan Minat & Disiplin Berbasis Sesi di Bandung. Menyediakan studio terapan untuk anak, remaja, hingga dewasa dengan fokus logika, keterampilan, dan karakter.
+            </p>
+            <div class="text-xs text-slate-500 pt-1">
+              📍 Jl. Bunga Mas No 6, RT 7 RW 1, Mekar Mulya, Panyileukan, Kota Bandung 40614
+            </div>
+          </div>
+
+          <div class="space-y-2.5">
+            <div class="text-xs font-bold text-white tracking-wider uppercase">Direktori Studio</div>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://academy.buana.studio/robotic" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+                  <i data-lucide="chevron-right" class="w-3 h-3 text-slate-600"></i>
+                  <span>Kursus Robotik & STEM Anak Bandung</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://academy.buana.studio/english" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+                  <i data-lucide="chevron-right" class="w-3 h-3 text-slate-600"></i>
+                  <span>English Speaking Club Anak & Remaja</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://academy.buana.studio/sundanese" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+                  <i data-lucide="chevron-right" class="w-3 h-3 text-slate-600"></i>
+                  <span>Kursus & Pendampingan Basa Sunda Bandung</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://academy.buana.studio/jiujitsu" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+                  <i data-lucide="chevron-right" class="w-3 h-3 text-slate-600"></i>
+                  <span>Brazilian Jiu-Jitsu (BJJ) Kids & Teens</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://academy.buana.studio/aikido" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5">
+                  <i data-lucide="chevron-right" class="w-3 h-3 text-slate-600"></i>
+                  <span>Aikido Dojo Bandung Anak & Umum</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-2.5">
+            <div class="text-xs font-bold text-white tracking-wider uppercase">Ekosistem & Kontak</div>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://buana.studio" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1">
+                  <span>Buana Studio Utama</span>
+                  <i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/6285117758517" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1">
+                  <span>WhatsApp Center: 0851-1775-8517</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:academy@buana.studio" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1">
+                  <span>Email: academy@buana.studio</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-slate-500 text-[11px]">
+          <div>
+            &copy; 2026 Buana Academy. Bagian dari ekosistem <a href="https://buana.studio" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white underline decoration-slate-700 underline-offset-2">Buana Studio (buana.studio)</a>.
+          </div>
+          <div class="flex items-center gap-4">
+            <span>Bandung, Jawa Barat</span>
+            <span>•</span>
+            <span>Studio Pembelajaran Berbasis Sesi</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Vanilla JavaScript for Program Filtering -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const programCards = document.querySelectorAll("#programs-grid .program-card");
+      const activeCountBadge = document.getElementById("active-count-badge");
+
+      function applyFilter(category) {
+        let visibleCount = 0;
+
+        programCards.forEach((card) => {
+          const cardCategory = card.getAttribute("data-category");
+          const shouldShow = (category === "all" || cardCategory === category);
+
+          if (shouldShow) {
+            card.classList.remove("hidden");
+            card.classList.add("animate-fade-in");
+            visibleCount++;
+          } else {
+            card.classList.add("hidden");
+            card.classList.remove("animate-fade-in");
+          }
+        });
+
+        if (activeCountBadge) {
+          activeCountBadge.textContent = `${visibleCount} Studio`;
+        }
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((btn) => {
+            btn.classList.remove("active");
+            btn.setAttribute("aria-selected", "false");
+          });
+
+          button.classList.add("active");
+          button.setAttribute("aria-selected", "true");
+
+          const selectedCategory = button.getAttribute("data-filter");
+          applyFilter(selectedCategory);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

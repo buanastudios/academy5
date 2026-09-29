@@ -6,8 +6,8 @@
 const DEFAULT_STORE = {
   settings: {
     schoolName: "BUANA ACADEMY",
-    tagline: "Kursus Robotika & STEAM Anak (Usia 5 - 18 Tahun)",
-    subTagline: "Eksplorasi logika, mekanika, & kreativitas sejak usia dini dengan metode hands-on menyenangkan. Kelas eksklusif maksimal 10 anak per sesi di Bandung.",
+    tagline: "Kursus Robotika & STEAM Anak di Bandung (Usia 5 - 18 Tahun)",
+    subTagline: "Belajar seru merakit robot motor blocks 100 pcs, logika coding, & mekanika gerak untuk usia 5 tahun (TK) hingga SMA. Maksimal 10 anak per kelas dengan jadwal ramah waktu sholat.",
     heroBadge: "🚀 Pendaftaran Gelombang Baru Telah Dibuka!",
     monthlyFee: 150000,
     feeDescription: "Rp 150.000 / Bulan (1x Pertemuan / Pekan • 4x Sebulan • Durasi 2 Jam)",
@@ -27,15 +27,15 @@ const DEFAULT_STORE = {
     posterImage: "assets/nusa-motorblocks-poster.png",
     realKitImage: "assets/real-robot-build.jpg",
 
-    // Comprehensive SEO & Meta Settings
+    // Comprehensive SEO & Meta Settings for Google Indexing
     seo: {
-      metaTitle: "BUANA ACADEMY - Kursus Robotika STEAM & Lego Anak Usia 5 Tahun Hingga SMA di Bandung",
-      metaDescription: "Kursus Robotika STEAM ramah anak usia 5 tahun (TK) hingga SMA di Bandung. Belajar rakit robot motor blocks 100 pcs, jadwal ramah waktu sholat, maks 10 anak per kelas, biaya Rp 150.000/bulan.",
-      metaKeywords: "kursus robotik bandung, les robotika anak 5 tahun, robotik preschool tk bandung, robotik sd bandung, steam robotics panyileukan, buana academy, les coding anak bandung, nusa motor blocks",
-      ogTitle: "BUANA ACADEMY - Kursus Robotika STEAM & Lego Edukatif Anak di Bandung",
-      ogDescription: "Mulai petualangan STEAM si kecil sejak usia 5 tahun! Belajar mandiri merakit robot bertenaga motor, logika coding, dan problem solving di Bandung.",
+      metaTitle: "Kursus Robotik Anak Bandung | Les STEAM & Robotika TK SD SMP SMA - Buana Academy",
+      metaDescription: "Kursus Robotika & STEAM terbaik untuk anak usia 5 tahun (TK) hingga SMA di Bandung. Praktik rakit robot motor blocks 100 pcs, coding, logika mekanika. Maks 10 anak per kelas, biaya terjangkau Rp 150.000/bln.",
+      metaKeywords: "kursus robotik bandung, les robotika anak bandung, kursus steam anak bandung, sekolah robotika bandung, les coding anak bandung, kursus robotik tk sd panyileukan, les robotik mekar mulya, buana academy, nusa motor blocks 100 pcs",
+      ogTitle: "Kursus Robotika & STEAM Anak di Bandung (5 Thn - SMA) | Buana Academy",
+      ogDescription: "Ubah waktu luang si kecil jadi karya nyata! Belajar mandiri merakit robot motor blocks 100 pcs, logika coding, dan kreativitas STEAM di Bandung. Eksklusif 10 anak/sesi, Rp 150rb/bulan.",
       ogImage: "assets/hero-kids.jpg",
-      canonicalUrl: "http://academy.buana.studio/robotic",
+      canonicalUrl: "http://academy.buana.studio/robotic/",
       robots: "index, follow",
       googleAnalyticsId: "G-XXXXXXXXXX",
       author: "BUANA ACADEMY (buana.studio)",
@@ -271,7 +271,7 @@ const DEFAULT_STORE = {
 
 class Store {
   constructor() {
-    this.STORAGE_KEY = "BUANA_ACADEMY_STORE_V2";
+    this.STORAGE_KEY = "BUANA_ACADEMY_STORE_V3";
     this.state = this.load();
   }
 

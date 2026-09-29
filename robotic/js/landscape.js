@@ -1,128 +1,15 @@
 /**
- * BUANA ACADEMY - LANDSCAPE ORIENTATION & WIDESCREEN ENGINE
+ * BUANA ACADEMY - Client Application Logic & Registration Engine
  * Handles:
- * 1. Screen Orientation Detection & Lock API
- * 2. 3D Rotation Barrier Overlay for Portrait screens
- * 3. Virtual CSS Landscape Mode Toggle
- * 4. Fullscreen Landscape Controller
- * 5. Dynamic Store Data Rendering & Registration Wizard
+ * 1. Dynamic Store Data Rendering
+ * 2. Multi-Step Registration Wizard
+ * 3. Payment Proof Upload & E-Ticket Generation
+ * 4. WhatsApp Automatic Message Formatting
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  initLandscapeEngine();
   initLandscapeApp();
 });
-
-let isVirtualLandscape = false;
-let userDismissedOverlay = false;
-
-function initLandscapeEngine() {
-  // Listen to orientation and resize changes
-  window.addEventListener("resize", handleOrientationCheck);
-  window.addEventListener("orientationchange", handleOrientationCheck);
-  if (screen.orientation) {
-    screen.orientation.addEventListener("change", handleOrientationCheck);
-  }
-
-  // Initial Check
-  handleOrientationCheck();
-
-  // Fullscreen change listener to update UI button text
-  document.addEventListener("fullscreenchange", updateFullscreenButtonUI);
-  document.addEventListener("webkitfullscreenchange", updateFullscreenButtonUI);
-}
-
-/**
- * Check if the current viewport is portrait or landscape
- */
-function handleOrientationCheck() {
-  const isPortrait = window.innerHeight > window.innerWidth;
-  const overlay = document.getElementById("landscape-enforce-overlay");
-  
-  if (!overlay) return;
-
-  if (isPortrait && !isVirtualLandscape && !userDismissedOverlay) {
-    overlay.classList.add("active");
-  } else {
-    overlay.classList.remove("active");
-  }
-}
-
-/**
- * Toggle HTML5 Fullscreen & Attempt Screen Orientation Lock to Landscape
- */
-window.toggleFullscreenLandscape = async function() {
-  try {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-      const docEl = document.documentElement;
-      if (docEl.requestFullscreen) {
-        await docEl.requestFullscreen();
-      } else if (docEl.webkitRequestFullscreen) {
-        await docEl.webkitRequestFullscreen();
-      }
-
-      // Try Screen Orientation Lock API
-      if (screen.orientation && screen.orientation.lock) {
-        try {
-          await screen.orientation.lock("landscape");
-        } catch (e) {
-          console.log("Orientation lock not supported by browser/device, relying on fullscreen:", e);
-        }
-      }
-
-      if (window.buanaSound) window.buanaSound.playClick();
-    } else {
-      if (document.exitFullscreen) {
-        await document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        await document.webkitExitFullscreen();
-      }
-      if (screen.orientation && screen.orientation.unlock) {
-        screen.orientation.unlock();
-      }
-    }
-  } catch (err) {
-    console.warn("Fullscreen request error:", err);
-  }
-};
-
-function updateFullscreenButtonUI() {
-  const isFull = !!(document.fullscreenElement || document.webkitFullscreenElement);
-  document.querySelectorAll(".btn-fullscreen-toggle").forEach(btn => {
-    btn.innerHTML = isFull ? "⛶ Keluar Fullscreen" : "⛶ Layar Penuh";
-  });
-}
-
-/**
- * Toggle Virtual CSS Landscape Mode (Forces 90deg rotation in CSS)
- */
-window.toggleVirtualLandscape = function() {
-  isVirtualLandscape = !isVirtualLandscape;
-  document.body.classList.toggle("virtual-landscape-active", isVirtualLandscape);
-  
-  const overlay = document.getElementById("landscape-enforce-overlay");
-  if (overlay) overlay.classList.remove("active");
-
-  const btn = document.getElementById("btn-virtual-toggle");
-  if (btn) {
-    btn.innerHTML = isVirtualLandscape ? "📱 Matikan Mode Putar" : "🔄 Paksa Landscape";
-  }
-
-  if (window.buanaSound) window.buanaSound.playClick();
-  if (window.buanaConfetti && isVirtualLandscape) {
-    window.buanaConfetti.burst(window.innerWidth / 2, window.innerHeight / 2, 40);
-  }
-};
-
-/**
- * Dismiss rotation overlay temporarily
- */
-window.dismissRotationOverlay = function() {
-  userDismissedOverlay = true;
-  const overlay = document.getElementById("landscape-enforce-overlay");
-  if (overlay) overlay.classList.remove("active");
-  if (window.buanaSound) window.buanaSound.playClick();
-};
 
 /**
  * Application Data Rendering & Form Logic
@@ -141,7 +28,7 @@ function applyDynamicSeoTags() {
   const seo = window.buanaStore.getSeo();
   if (!seo) return;
 
-  if (seo.metaTitle) document.title = `[Landscape] ${seo.metaTitle}`;
+  if (seo.metaTitle) document.title = seo.metaTitle;
 }
 
 function renderLandscapeContent() {
@@ -548,8 +435,8 @@ function showLandscapeSuccessTicket(reg) {
   document.getElementById("tkt-payment-method").textContent = `${reg.paymentMethod} (Menunggu Verifikasi)`;
 
   const settings = window.buanaStore.getSettings();
-  const waPhone = settings.whatsapp || "6281234567890";
-  const messageText = `Halo Admin BUANA ACADEMY,\n\nSaya telah mendaftarkan anak saya melalui Mode Landscape Kursus Robotika:\n\n` +
+  const waPhone = settings.whatsapp || "6285117758517";
+  const messageText = `Halo Admin BUANA ACADEMY,\n\nSaya telah mendaftarkan anak saya untuk Kursus Robotika STEAM:\n\n` +
     `📋 *No Registrasi:* ${reg.id}\n` +
     `👤 *Nama Orang Tua:* ${reg.parentName}\n` +
     `🤖 *Nama Anak:* ${reg.studentName} (${reg.studentAge} Tahun - ${reg.studentLevel})\n` +

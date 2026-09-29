@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Hub Landing Page -->
+  <url>
+    <loc>https://academy.buana.studio/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Robotics & STEM Studio -->
+  <url>
+    <loc>https://academy.buana.studio/robotic</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English Speaking Club -->
+  <url>
+    <loc>https://academy.buana.studio/english</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Basa Sunda & Budaya -->
+  <url>
+    <loc>https://academy.buana.studio/sundanese</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Brazilian Jiu-Jitsu (BJJ) -->
+  <url>
+    <loc>https://academy.buana.studio/jiujitsu</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Aikido Dojo -->
+  <url>
+    <loc>https://academy.buana.studio/aikido</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
