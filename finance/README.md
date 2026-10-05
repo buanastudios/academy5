@@ -1,38 +1,37 @@
 # Buana Academy — Islamic Financial Literacy for Kids
 🌐 **Live URL**: [http://academy.buana.studio/finance](http://academy.buana.studio/finance)
 
-Website resmi program bimbingan literasi keuangan Islami untuk anak, webinar, dan bedah seri buku **"Aku Cerdas Mengelola Uang"** berlandaskan kaidah fiqih Muamalat Kontemporer karya **Ust. Dr. Erwandi Tarmidzi, M.A.**
+> *"A children's financial management series that teaches Muslim children not only how to understand money, but how to make wise, ethical and halal financial decisions."*
+>
+> **Slogan**: **Think. Plan. Choose. Grow. Give.**
+
+Website resmi program bimbingan literasi keuangan Islami untuk anak, webinar, dan bedah seri buku **"Aku Cerdas Mengelola Uang"** berlandaskan kaidah fiqih Muamalat Kontemporer karya **Ust. Dr. Erwandi Tarmidzi, M.A.** bersama **Astrid Nurul Falah, S.T., M.M.**
 
 ---
 
-### 🎨 Desain & Palet Warna (Sesuai Referensi Inorobo):
-1. **Palet Warna Utama**:
-   - 🌌 **Deep Navy Blue (`#0a192f` / `#0f2742`)**: Latar Hero elegan, header gelap, dan footer profesional.
-   - ⚡ **Vibrant Accent Orange (`#ff6b00` / `#ea580c`)**: Tombol CTA utama, badge highlight, dan banner penawaran.
-   - 💎 **Skyline Cyan (`#38bdf8` / `#0ea5e9`)**: Aksen tech, floating badges, dan icon container modern.
-   - ⚪ **Clean Surface White (`#ffffff` / `#f8fafc`)**: Konten bersih, mudah dibaca, dan kontras tinggi.
+### 🎨 Desain & Fitur Utama:
+1. **Clean Header & Navigation**:
+   - Logo lambang bintang & perisai emas resmi Buana Academy (`images/logo_shield.jpg`).
+   - Navigasi teks bersih tanpa icon/emoji clutter: *Beranda, Keunggulan, Level Usia, 8 Seri Buku, Simulasi & Game, 4 Sahabat, Profil Tutor, Lokasi Studio, FAQ*.
+   - Tombol CTA utama: *Daftar Les & Buku*.
 
-2. **Hero Section Modern dengan 3D Floating Badges**:
-   - Headline reference style: *"Be Smart — Be Wise — Be Halal & Berkah"*.
-   - Counter stats: **25+ Topik Studi Kasus**, **1000+ Anak & Pembaca**, **8 Seri Buku**.
-   - Center visual dengan floating tech badges: `<PLAN • DO • CHECK/>`, `⚖️ ANTI-RIBA`, `🍞 MODAL ➔ LABA`, `🎓 MM FINANCE UNPAD`.
+2. **Image-Driven Layout (Tanpa Raw Icon Clutter)**:
+   - Seluruh icon generik/emoji telah digantikan dengan **gambar render 3D nyata dan visual thumbnail terdedikasi**:
+     - `images/logo_shield.jpg`: Lambang emas Buana Academy.
+     - `images/badge_online.jpg`: Thumbnail Kelas Privat Online (Zoom/GMeet).
+     - `images/badge_studio.jpg`: Thumbnail Studio Buana Academy Bandung.
+     - `images/hero_mascot.jpg`: Render 3D brankas & peti dinar emas Islami.
+     - `images/kids_learning.jpg`: Visual anak Muslim belajar literasi finansial dengan laptop.
+     - `images/books_series.jpg`: Mockup display 3D 8 Seri Buku Anak.
+     - `images/four_friends.jpg`: Universe 4 Sahabat (Ammar, Rafi, Naila, Maryam).
+     - `images/instructor_astrid.jpg`: Profil pengajar Astrid Nurul Falah, S.T., M.M.
 
-3. **5 Icon Pill Grid ("Ada Apa Saja di Buana Academy Finance?")**:
-   - 💻 Privat Online (Zoom/GMeet)
-   - 🏫 Studio Bandung Tatap Muka
-   - 📚 8 Seri Buku Bergambar
-   - 🎙️ Webinar Bedah Buku Komunitas
-   - ⚖️ Fiqih Muamalat Kontemporer
+3. **Kepatuhan Prinsip Sunnah & Syariah**:
+   - 🚫 **Tanpa Celengan Hewan / Piggy Bank**: Digantikan dengan kotak tabungan kayu Islami, pundi-pundi berkah, dan brankas koin.
+   - 👤 **Ilustrasi Karakter Faceless (Tanpa Gambar Wajah Makhluk Bernyawa)**: Seluruh gambar manusia dibuat dengan gaya faceless (tanpa mata, hidung, dan mulut) sesuai kaidah sunnah.
 
-4. **Section Level Kelas (3 Cards with Color Top Borders)**:
-   - 🎈 **Creative Level** (Skyline Blue Top, Usia 4–6 Th)
-   - 🎒 **Basic Level** (Navy Top, Usia 7–12 Th - Highlight)
-   - 🎓 **Innovating Level** (Orange Top, Usia 13–15 Th)
+4. **Interactive Playground & Audio Synthesizer**:
+   - Efek suara koin (*cling!*), pop klik, melodi sukses, simulasi kotak tabungan 4 pos berkah, komparator bisnis roti halal vs utang riba, dan kuis *Mau vs Butuh*.
 
-5. **Hubungi Kami & Interactive Google Maps Embed**:
-   - Form pendaftaran interaktif terhubung langsung ke WhatsApp otomatis.
-   - Kartu info alamat Studio Buana Academy di Bandung & jam operasional.
-   - Embed Google Maps interaktif Kota Bandung.
-
-6. **Audio Synthesizer Engine & Mini Playground**:
-   - Efek suara koin (*cling!*), pop klik, melodi sukses, simulasi celengan 4 pos, komparator bisnis roti halal vs utang riba.
+5. **Lokasi Studio & Google Maps**:
+   - Informasi lokasi tatap muka Studio Buana Academy di Bandung (dengan perjanjian, tanpa les door-to-door ke rumah) dan integrasi Google Maps interaktif.
