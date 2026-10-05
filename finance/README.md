@@ -5,35 +5,34 @@ Website resmi program bimbingan literasi keuangan Islami untuk anak, webinar, da
 
 ---
 
-### 🚀 Optimasi SERP & Smartphone Adaptive Layout:
-1. **SEO & SERP Rich Snippets (Schema.org / JSON-LD)**:
-   - `EducationalOrganization` & `WebSite` Schema.
-   - `Person` Schema untuk **Astrid Nurul Falah, S.T., M.M.** (MM Finance UNPAD).
-   - `Course` Schema untuk program literasi finansial syariah anak.
-   - `FAQPage` Schema untuk menampilkan cuplikan tanya-jawab langsung di hasil pencarian Google.
-   - `BreadcrumbList` Schema untuk navigasi terstruktur.
-   - Lengkap dengan Open Graph (WhatsApp/Facebook), Twitter Cards, Canonical URL, Geo Tags, dan Meta Keywords.
+### 🎨 Desain & Palet Warna (Sesuai Referensi Inorobo):
+1. **Palet Warna Utama**:
+   - 🌌 **Deep Navy Blue (`#0a192f` / `#0f2742`)**: Latar Hero elegan, header gelap, dan footer profesional.
+   - ⚡ **Vibrant Accent Orange (`#ff6b00` / `#ea580c`)**: Tombol CTA utama, badge highlight, dan banner penawaran.
+   - 💎 **Skyline Cyan (`#38bdf8` / `#0ea5e9`)**: Aksen tech, floating badges, dan icon container modern.
+   - ⚪ **Clean Surface White (`#ffffff` / `#f8fafc`)**: Konten bersih, mudah dibaca, dan kontras tinggi.
 
-2. **Mobile Smartphone First Experience**:
-   - **Sticky Bottom App Navigation Bar** (Beranda, Game, 8 Buku, Paket, WhatsApp) seperti aplikasi native.
-   - **Fluid Responsive Typography**: Ukuran font adaptif dan nyaman dibaca di layar 320px hingga 4K.
-   - **Touch Target Optimization**: Tombol minimal 44px–48px dengan respon taktil dan tap audio responsif.
-   - **Audio Context Mobile Gesture Support**: Synthesizer audio koin otomatis aktif pada sentuhan pertama.
+2. **Hero Section Modern dengan 3D Floating Badges**:
+   - Headline reference style: *"Be Smart — Be Wise — Be Halal & Berkah"*.
+   - Counter stats: **25+ Topik Studi Kasus**, **1000+ Anak & Pembaca**, **8 Seri Buku**.
+   - Center visual dengan floating tech badges: `<PLAN • DO • CHECK/>`, `⚖️ ANTI-RIBA`, `🍞 MODAL ➔ LABA`, `🎓 MM FINANCE UNPAD`.
 
-3. **Web Audio Synthesizer Engine (Zero External Dependencies)**:
-   - 🪙 **Coin Chime (*Cling!*)**: Efek suara koin emas realistis saat menekan tombol dan koin.
-   - 🫧 **Clicky Bubble Pop**: Efek taktil seru pada setiap klik tombol navigasi.
-   - 🎉 **Success Arpeggio**: Melodi penghargaan ketika menyelesaikan simulasi & quiz.
-   - ⚠️ **Educational Caution Cue**: Nada pengingat saat membedakan akad riba.
-   - 🔊 **Sound Effect Toggle**: Fitur ON/OFF audio di bar navigasi atas.
-   - ✨ **Coin Particle Burst**: Animasi koin emas melayang setiap kali berinteraksi.
+3. **5 Icon Pill Grid ("Ada Apa Saja di Buana Academy Finance?")**:
+   - 💻 Privat Online (Zoom/GMeet)
+   - 🏫 Studio Bandung Tatap Muka
+   - 📚 8 Seri Buku Bergambar
+   - 🎙️ Webinar Bedah Buku Komunitas
+   - ⚖️ Fiqih Muamalat Kontemporer
 
-4. **Jenjang Usia Lengkap**:
-   - 🎈 **Preschool / TK (4–6 Tahun)**: Mengenal bentuk uang, celengan, dan adab bersyukur.
-   - 🎒 **Primary / SD (7–12 Tahun)**: Formula *Plan-Do-Check-Improve*, Needs vs Wants, dan Pengusaha Cilik.
-   - 🎓 **Junior High / SMP (13–15 Tahun)**: Pemahaman akad syariah, bahaya Pinjol & Paylater, serta bedah Fiqih Muamalat Kontemporer.
+4. **Section Level Kelas (3 Cards with Color Top Borders)**:
+   - 🎈 **Creative Level** (Skyline Blue Top, Usia 4–6 Th)
+   - 🎒 **Basic Level** (Navy Top, Usia 7–12 Th - Highlight)
+   - 🎓 **Innovating Level** (Orange Top, Usia 13–15 Th)
 
-5. **3 Interactive Mini-Games & Simulators**:
-   - 🐷 **Celengan 4 Pos Budgeting**: Alokasi uang saku Rp50.000 ke wadah Kebutuhan, Tabungan, Sedekah, dan Keinginan.
-   - 🥖 **Simulasi Bisnis Roti Rafi vs Riba (Book 4 & 5)**: Perbandingan riil modal + laba jual beli halal vs bunga pinjaman.
-   - 🎯 **Quiz Interaktif: Mau atau Butuh?**: Latihan mengambil keputusan belanja bijak.
+5. **Hubungi Kami & Interactive Google Maps Embed**:
+   - Form pendaftaran interaktif terhubung langsung ke WhatsApp otomatis.
+   - Kartu info alamat Studio Buana Academy di Bandung & jam operasional.
+   - Embed Google Maps interaktif Kota Bandung.
+
+6. **Audio Synthesizer Engine & Mini Playground**:
+   - Efek suara koin (*cling!*), pop klik, melodi sukses, simulasi celengan 4 pos, komparator bisnis roti halal vs utang riba.
