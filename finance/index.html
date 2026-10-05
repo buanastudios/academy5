@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islamic Financial Literacy for Kids | Buana Academy & Seri Buku Aku Cerdas Mengelola Uang</title>
+  <meta name="description" content="Les privat (Zoom/GMeet & Offline Studio), webinar bedah buku dan literasi keuangan anak berbasis syariah & Muamalat Kontemporer Ust. Erwandi Tarmidzi bersama Astrid Nurul Falah, S.T., M.M." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231b4332'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            },
+            forest: {
+              DEFAULT: '#0d3b2e',
+              light: '#165b47',
+              dark: '#08251d',
+              card: '#114a3a'
+            },
+            gold: {
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+              accent: '#f59e0b'
+            },
+            terracotta: {
+              DEFAULT: '#9c3418',
+              dark: '#7c2510',
+              light: '#ba4323'
+            },
+            cream: {
+              DEFAULT: '#fbf8f2',
+              soft: '#f4ede1',
+              muted: '#ede3d1'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          },
+          boxShadow: {
+            'custom': '0 10px 30px -5px rgba(13, 59, 46, 0.08)',
+            'custom-lg': '0 20px 40px -10px rgba(13, 59, 46, 0.15)',
+            'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.04)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fbf8f2;
+      color: #1f2937;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+    .hero-pattern {
+      background-color: #0d3b2e;
+      background-image: radial-gradient(#1e6b54 1px, transparent 1px), radial-gradient(#1e6b54 1px, #0d3b2e 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    }
+    .islamic-badge {
+      background: linear-gradient(135deg, rgba(250, 204, 21, 0.2) 0%, rgba(234, 179, 8, 0.05) 100%);
+      border: 1px solid rgba(250, 204, 21, 0.35);
+    }
+    .gradient-gold-text {
+      background: linear-gradient(135deg, #fde047 0%, #eab308 50%, #ca8a04 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .badge-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .badge-card:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-forest-dark text-emerald-200 text-xs sm:text-sm py-2 px-4 border-b border-forest-light/30">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-500"></span>
+        </span>
+        <span>📢 Pendaftaran Kelas Baru & Pre-Order Seri Buku <strong>"Aku Cerdas Mengelola Uang"</strong> telah dibuka!</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="inline-flex items-center gap-1 text-emerald-300">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i> Berbasis Fiqih Muamalat Kontemporer
+        </span>
+        <span class="hidden md:inline-flex items-center gap-1 text-gray-300">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-400"></i> Online Zoom / GMeet & Datang ke Studio Buana
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-forest/95 backdrop-blur-md border-b border-emerald-900/50 shadow-md transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Logo -->
+        <a href="#beranda" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-gold-400 flex items-center justify-center text-white font-heading font-black text-2xl shadow-lg shadow-brand-900/40 group-hover:scale-105 transition-transform">
+            B
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-white font-heading font-bold text-xl tracking-tight">Buana Academy</span>
+              <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-gold-500/20 text-gold-300 border border-gold-500/30">Finance</span>
+            </div>
+            <p class="text-emerald-300/80 text-xs">Islamic Financial Literacy for Kids</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-emerald-100">
+          <a href="#beranda" class="hover:text-gold-400 transition-colors">Beranda</a>
+          <a href="#tentang" class="hover:text-gold-400 transition-colors">Sekilas Program</a>
+          <a href="#program" class="hover:text-gold-400 transition-colors">Pilihan Belajar</a>
+          <a href="#kurikulum" class="hover:text-gold-400 transition-colors">8 Seri Buku</a>
+          <a href="#karakter" class="hover:text-gold-400 transition-colors">Universe Tokoh</a>
+          <a href="#pengajar" class="hover:text-gold-400 transition-colors">Profil Tutor</a>
+          <a href="#faq" class="hover:text-gold-400 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- CTA & Quick WhatsApp -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/6281220000000?text=Assalamu%27alaikum%20Admin%20Buana%20Academy%2C%20saya%20tertarik%20mendaftar%20Program%20Finance%20for%20Kids%20%2F%20Pemesanan%20Buku" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-forest-dark font-heading font-bold px-5 py-2.5 rounded-full shadow-lg shadow-gold-500/20 text-sm transition-all transform hover:-translate-y-0.5">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Daftar / Kontak WA</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-emerald-200 hover:bg-forest-light focus:outline-none" aria-label="Toggle Menu">
+          <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-forest-dark/95 border-b border-emerald-800/80 px-4 pt-3 pb-6 space-y-3">
+      <a href="#beranda" class="block text-emerald-100 font-medium py-2 hover:text-gold-400">Beranda</a>
+      <a href="#tentang" class="block text-emerald-100 font-medium py-2 hover:text-gold-400">Sekilas Program</a>
+      <a href="#program" class="block text-emerald-100 font-medium py-2 hover:text-gold-400">Pilihan Belajar & Biaya</a>
+      <a href="#kurikulum" class="block text-emerald-100 font-medium py-2 hover:text-gold-400">8 Seri Buku Edukasi</a>
+      <a href="#karakter" class="block text-emerald-100 font-medium py-2 hover:text-gold-400">Universe Tokoh Sahabat</a>
+      <a href="#pengajar" class="block text-emerald-100 font-medium py-2 hover:text-gold-400">Profil Astrid Nurul Falah, S.T., M.M.</a>
+      <a href="#faq" class="block text-emerald-100 font-medium py-2 hover:text-gold-400">FAQ & Tanya Jawab</a>
+      <div class="pt-3">
+        <a href="https://wa.me/6281220000000?text=Assalamu%27alaikum%20Admin%20Buana%20Academy%2C%20saya%20ingin%20konsultasi%20Program%20Finance%20for%20Kids" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gold-500 text-forest-dark font-heading font-bold py-3 rounded-xl text-center">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Konsultasi via WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Matching Attached Layout) -->
+  <section id="beranda" class="relative hero-pattern text-white overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-emerald-900/60">
+    <!-- Ambient glow decorative circles -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-500/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-24 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text Left -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full islamic-badge text-gold-300 text-xs sm:text-sm font-semibold">
+            <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i>
+            <span>PROGRAM KURSUS PRIVAT • WEBINAR • BEDAH BUKU</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-extrabold font-heading leading-tight sm:leading-none tracking-tight">
+            Les Privat, Webinar & Bedah Buku: <br class="hidden sm:inline"/>
+            <span class="gradient-gold-text">Islamic Financial Literacy for Kids</span>
+          </h1>
+
+          <!-- Tagline Box -->
+          <div class="p-3.5 bg-forest-card/80 border-l-4 border-gold-400 rounded-r-xl max-w-2xl">
+            <p class="text-emerald-100 font-medium text-sm sm:text-base italic">
+              "Kenal Uang • Kelola dengan Bijak • Cari yang Halal • Hidup Berkah"
+            </p>
+          </div>
+
+          <!-- Subtitle / Context -->
+          <p class="text-emerald-200 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+            Bimbingan literasi keuangan Islami untuk <strong>Homeschoolers & Siswa SD-SMP</strong>. Membangun kecerdasan finansial sejak dini agar tidak terjerat utang konsumtif dan bahaya riba, berlandaskan prinsip fiqih <em>Muamalat Kontemporer</em> karya <strong>Ust. Dr. Erwandi Tarmidzi, M.A.</strong>
+          </p>
+
+          <!-- Crucial Note on Location -->
+          <div class="flex items-center gap-2.5 text-xs sm:text-sm text-emerald-300/90 bg-emerald-950/60 px-4 py-2.5 rounded-xl border border-emerald-800/60">
+            <i data-lucide="info" class="w-4 h-4 text-gold-400 shrink-0"></i>
+            <span><strong>Metode Belajar:</strong> 100% Online Interaktif (Zoom / Google Meet) ATAU Tatap Muka di Studio Buana Academy (Tidak melayani guru datang ke rumah / door-to-door).</span>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#program" class="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-forest-dark font-heading font-bold text-base px-7 py-3.5 rounded-full shadow-xl shadow-gold-500/25 transition-all transform hover:-translate-y-1">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+              <span>Pilih Program Kursus</span>
+            </a>
+            <a href="#kurikulum" class="inline-flex items-center justify-center gap-2 border-2 border-emerald-400/40 hover:border-gold-400 text-emerald-100 hover:text-gold-300 font-heading font-semibold text-base px-6 py-3.5 rounded-full transition-all bg-forest-card/40">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+              <span>Lihat 8 Seri Buku</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Under Hero -->
+          <div class="pt-4 border-t border-emerald-900/70 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-emerald-300">
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-gold-400"></i> Rujukan Muamalat Kontemporer</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-gold-400"></i> Karakter Storytelling 4 Sahabat</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-gold-400"></i> Cocok untuk Homeschooler</span>
+          </div>
+
+        </div>
+
+        <!-- Hero Card Right (Instructor & Book Highlight) -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Glow background effect -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-gold-500 to-brand-500 rounded-3xl blur-xl opacity-30"></div>
+
+            <div class="relative bg-gradient-to-b from-forest-card to-forest-dark p-6 sm:p-7 rounded-2xl border border-emerald-700/60 shadow-2xl space-y-5">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between border-b border-emerald-800/80 pb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-emerald-800 border-2 border-gold-400 flex items-center justify-center font-heading font-bold text-gold-300 text-lg shadow">
+                    AF
+                  </div>
+                  <div>
+                    <h3 class="font-heading font-bold text-white text-base">Astrid Nurul Falah, S.T., M.M.</h3>
+                    <p class="text-xs text-gold-300/90">Lead Instructor & Founder Program</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-md bg-gold-500/20 text-gold-300 text-[11px] font-bold border border-gold-500/40">
+                  MM Finance UNPAD
+                </span>
+              </div>
+
+              <!-- Instructor Summary Details -->
+              <div class="space-y-2.5 text-xs text-emerald-200">
+                <div class="flex items-start gap-2.5 bg-emerald-950/70 p-2.5 rounded-lg border border-emerald-900">
+                  <i data-lucide="graduation-cap" class="w-4 h-4 text-gold-400 mt-0.5 shrink-0"></i>
+                  <div>
+                    <strong>Magister Manajemen Keuangan</strong> dari <em>Universitas Padjadjaran (UNPAD)</em> & Sarjana Teknik (S.T.).
+                  </div>
+                </div>
+                <div class="flex items-start gap-2.5 bg-emerald-950/70 p-2.5 rounded-lg border border-emerald-900">
+                  <i data-lucide="award" class="w-4 h-4 text-brand-400 mt-0.5 shrink-0"></i>
+                  <div>
+                    <strong>±7 Tahun Pengalaman Mengajar</strong> bidang Ekonomi & Bahasa Inggris di semua jenjang (SD, SMP, & SMA).
+                  </div>
+                </div>
+                <div class="flex items-start gap-2.5 bg-emerald-950/70 p-2.5 rounded-lg border border-emerald-900">
+                  <i data-lucide="building-2" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+                  <div>
+                    <strong>6 Tahun di PKBM Baitul Muttaqin</strong> & <strong>1 Tahun di SD At-Tibyan Bandung</strong> Quranic School.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Book Preview Card Mockup inside Hero -->
+              <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-900/80 to-forest-dark border border-gold-500/30">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-16 rounded-md bg-gold-500/20 border border-gold-400 flex flex-col items-center justify-center text-center p-1 text-gold-300 shrink-0">
+                    <i data-lucide="book-heart" class="w-5 h-5 mb-1"></i>
+                    <span class="text-[9px] font-black leading-none">8 BUKU</span>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-gold-400 uppercase tracking-wider">Series Buku Anak Islami</div>
+                    <div class="text-sm font-heading font-extrabold text-white">"AKU CERDAS MENGELOLA UANG"</div>
+                    <p class="text-[11px] text-emerald-300 mt-0.5">8 Seri Buku Bergambar (24-32 Hal) • Tokoh 4 Sahabat</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Callout Action -->
+              <a href="#kurikulum" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-forest-light hover:bg-emerald-700 text-emerald-100 font-semibold text-xs transition-colors border border-emerald-600/50">
+                <span>Pelajari Silabus & Rincian 8 Buku</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK PARTNER & TOPIC BADGES BAR (Layout Section 2) -->
+  <section class="bg-white border-b border-gray-200 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center lg:justify-between gap-4 text-gray-700 font-heading font-bold text-xs sm:text-sm">
+        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-cream-soft border border-cream-muted">
+          <i data-lucide="video" class="w-4 h-4 text-emerald-700"></i>
+          <span>Zoom & Google Meet Online</span>
+        </div>
+        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-cream-soft border border-cream-muted">
+          <i data-lucide="building" class="w-4 h-4 text-emerald-700"></i>
+          <span>Datang ke Studio Buana Academy</span>
+        </div>
+        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-cream-soft border border-cream-muted">
+          <i data-lucide="book" class="w-4 h-4 text-emerald-700"></i>
+          <span>Ust. Erwandi Tarmidzi Reference</span>
+        </div>
+        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-cream-soft border border-cream-muted">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-rose-600"></i>
+          <span>Edukasi Anti-Riba Sejak Dini</span>
+        </div>
+        <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-cream-soft border border-cream-muted">
+          <i data-lucide="home" class="w-4 h-4 text-emerald-700"></i>
+          <span>Ramah Homeschoolers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM SUMMARY CARD (Layout Section 3: Sekilas Program Dark Box) -->
+  <section id="tentang" class="py-14 bg-forest-dark text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-forest-card rounded-3xl border border-emerald-700/50 p-6 sm:p-10 shadow-2xl">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Col: Explanation -->
+          <div class="lg:col-span-6 space-y-4">
+            <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="compass" class="w-4 h-4"></i>
+              <span>Misi Edukasi Finansial Generasi Muslim</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-white tracking-tight">
+              Sekilas tentang Program Finance for Kids di Buana Academy
+            </h2>
+            <p class="text-emerald-200 text-sm sm:text-base leading-relaxed">
+              Di era digital saat ini, anak-anak dan remaja sangat mudah terpapar gaya hidup konsumtif, pinjaman online, game berbayar, paylater, hingga bahaya riba terselubung.
+            </p>
+            <p class="text-emerald-200 text-sm sm:text-base leading-relaxed">
+              Program <strong>Buana Academy Finance</strong> hadir untuk mengisi kekosongan kurikulum finansial berbasis syariah. Dengan mengadaptasi fiqih muamalat karya <em>Ust. Dr. Erwandi Tarmidzi, M.A.</em> ke dalam bahasa ramah anak, kami mengajarkan bahwa uang adalah <strong>amanah</strong>, keuntungan sah berasal dari <strong>jual beli yang jujur</strong>, dan <strong>riba wajib dihindari</strong> demi keberkahan hidup.
+            </p>
+            
+            <div class="pt-2">
+              <a href="#program" class="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 font-heading font-bold text-sm">
+                <span>Pelajari Paket Les & Webinar</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Col: Feature Quick Info Grid -->
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="bg-forest-dark/90 p-4 rounded-2xl border border-emerald-800/80 space-y-2">
+              <div class="w-9 h-9 rounded-lg bg-emerald-900/80 text-gold-400 flex items-center justify-center font-bold">
+                <i data-lucide="video" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-heading font-bold text-white text-base">Metode Pembelajaran</h4>
+              <p class="text-xs text-emerald-300 leading-relaxed">
+                Tersedia secara <strong>Online via Zoom/GMeet</strong> untuk seluruh Indonesia, atau <strong>Datang ke Studio Buana Academy</strong> di Bandung. <em>(Tidak ada guru privat datang ke rumah)</em>.
+              </p>
+            </div>
+
+            <div class="bg-forest-dark/90 p-4 rounded-2xl border border-emerald-800/80 space-y-2">
+              <div class="w-9 h-9 rounded-lg bg-emerald-900/80 text-gold-400 flex items-center justify-center font-bold">
+                <i data-lucide="user-check" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-heading font-bold text-white text-base">Tutor Berkompeten</h4>
+              <p class="text-xs text-emerald-300 leading-relaxed">
+                Dipandu langsung oleh <strong>Astrid Nurul Falah, S.T., M.M.</strong> (Lulusan Magister Manajemen Keuangan UNPAD) dengan pengalaman mengajar 7+ tahun di sekolah Islam & PKBM.
+              </p>
+            </div>
+
+            <div class="bg-forest-dark/90 p-4 rounded-2xl border border-emerald-800/80 space-y-2">
+              <div class="w-9 h-9 rounded-lg bg-emerald-900/80 text-gold-400 flex items-center justify-center font-bold">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-heading font-bold text-white text-base">Universe 4 Sahabat</h4>
+              <p class="text-xs text-emerald-300 leading-relaxed">
+                Anak belajar melalui alur cerita seru bersama <strong>Ammar, Rafi, Naila, dan Maryam</strong> sehingga materi terasa seperti petualangan nyata, bukan hafalan rumus yang kaku.
+              </p>
+            </div>
+
+            <div class="bg-forest-dark/90 p-4 rounded-2xl border border-emerald-800/80 space-y-2">
+              <div class="w-9 h-9 rounded-lg bg-emerald-900/80 text-gold-400 flex items-center justify-center font-bold">
+                <i data-lucide="scale" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-heading font-bold text-white text-base">Buku & Praktek Muamalat</h4>
+              <p class="text-xs text-emerald-300 leading-relaxed">
+                Disertai studi kasus sederhana: simulasi pengusaha cilik (HPP, Revenue, Profit) vs simulasi akad pinjaman dengan bunga yang terlarang dalam Islam.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY BENEFITS (Layout Section 4: 4 Poin Utama Manfaat) -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          <span>Nilai Unggul & Output Pembelajaran</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-forest-dark tracking-tight">
+          Yang Akan Didapatkan Anak dari Program Finance for Kids
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Membimbing anak memahami konsep uang dari akar filosofis hingga praktek sehari-hari secara syar'i.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Benefit 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom hover:shadow-custom-lg transition-all badge-card space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center">
+            <i data-lucide="coins" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-forest-dark">1. Menghargai Nilai Rezeki</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Anak paham bahwa uang adalah amanah dari Allah. Mereka belajar membedakan antara kebutuhan (needs) vs keinginan (wants), serta menumbuhkan rasa syukur dan gemar bersedekah.
+          </p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom hover:shadow-custom-lg transition-all badge-card space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center">
+            <i data-lucide="pie-chart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-forest-dark">2. Keterampilan Budgeting</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Memperkenalkan formula <em>Plan → Do → Check → Improve</em> untuk mengelola uang saku harian atau mingguan. Anak tidak membiarkan uang habis tanpa perencanaan matang.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom hover:shadow-custom-lg transition-all badge-card space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+            <i data-lucide="store" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-forest-dark">3. Mental Pengusaha Halal</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Mengenalkan konsep modal, HPP, harga jual, dan laba halal melalui praktek simulasi jual beli riil. Anak didorong mandiri dan kreatif dalam berwirausaha secara adil dan jujur.
+          </p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom hover:shadow-custom-lg transition-all badge-card space-y-3 border-t-4 border-t-rose-500">
+          <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+            <i data-lucide="shield-x" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-forest-dark">4. Imun Terhadap Bahaya Riba</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            Memahami beda keuntungan jual beli vs tambahan uang dari utang yang disyaratkan (QS. Al-Baqarah: 275). Menghindarkan anak dari mentalitas "uang cepat" dan jerat pinjol di masa depan.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS BAR (Layout Section 5) -->
+  <section class="bg-forest text-white py-8 border-y border-emerald-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-heading font-extrabold text-gold-400">8 Seri</div>
+          <div class="text-xs text-emerald-200 font-medium">Buku & Modul Lengkap</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-heading font-extrabold text-gold-400">±7 Tahun</div>
+          <div class="text-xs text-emerald-200 font-medium">Pengalaman Pengajar</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-heading font-extrabold text-gold-400">100%</div>
+          <div class="text-xs text-emerald-200 font-medium">Prinsip Muamalat Syariah</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-heading font-extrabold text-gold-400">4.9 / 5.0</div>
+          <div class="text-xs text-emerald-200 font-medium">Rating Kepuasan Orang Tua</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM OPTIONS & PACKAGES (Layout Section 6: Pilihan Paket Belajar) -->
+  <section id="program" class="py-16 sm:py-20 bg-cream-soft">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest text-gold-300 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+          <span>Pilihan Program Belajar</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-forest-dark tracking-tight">
+          Pilihan Kelas Privat, Webinar & Bedah Buku
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Pilih jalur belajar yang paling sesuai untuk putra-putri Anda, keluarga homeschooling, maupun komunitas sekolah.
+        </p>
+
+        <!-- Notification Banner about Door-to-Door -->
+        <div class="inline-block bg-amber-50 border border-amber-300 text-amber-900 text-xs font-semibold px-4 py-2 rounded-xl mt-2">
+          ⚠️ <strong>Catatan Penting:</strong> Kami tidak menyediakan layanan guru datang ke rumah (door-to-door). Seluruh sesi tatap muka berlokasi di <strong>Studio Buana Academy</strong> atau secara <strong>Online via Zoom / GMeet</strong>.
+        </div>
+      </div>
+
+      <!-- Packages Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Option 1: Privat Online (Zoom/GMeet) -->
+        <div class="bg-white rounded-3xl border-2 border-emerald-700/20 shadow-custom p-7 flex flex-col justify-between hover:border-emerald-600 transition-all badge-card">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-bold text-xs uppercase tracking-wide border border-blue-200">
+                1-on-1 Online
+              </span>
+              <i data-lucide="video" class="w-5 h-5 text-blue-600"></i>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-xl text-forest-dark">
+              Kelas Privat Online (Zoom / GMeet)
+            </h3>
+            
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Bimbingan privat 1 guru 1 siswa via video conference interaktif dengan jadwal fleksibel, ideal untuk santri/homeschooler dari seluruh Indonesia.
+            </p>
+
+            <div class="space-y-2.5 pt-2 border-t border-gray-100 text-xs text-gray-700 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Durasi: 60 - 75 Menit per Sesi</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>E-Booklet & Lembar Kerja Interaktif</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Simulasi Anggaran & Studi Kasus Muamalat</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Laporan Perkembangan ke Orang Tua</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-gray-100 space-y-3">
+            <a href="https://wa.me/6281220000000?text=Assalamu%27alaikum%2C%20saya%20tertarik%20dengan%20Kelas%20Privat%20Online%20(Zoom%2FGMeet)%20Finance%20for%20Kids" target="_blank" class="w-full flex items-center justify-center gap-2 bg-forest hover:bg-forest-light text-white font-heading font-bold py-3 rounded-xl text-sm transition-colors shadow">
+              <span>Daftar Kelas Online</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 2: Privat Onsite (Studio Buana Academy) - HIGHLIGHTED -->
+        <div class="bg-forest-dark rounded-3xl border-2 border-gold-400 shadow-custom-lg p-7 text-white flex flex-col justify-between relative transform lg:-translate-y-2 badge-card">
+          <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-gold-400 text-forest-dark font-heading font-black text-xs uppercase tracking-wider shadow">
+            ⭐ Paling Diminati di Bandung
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 font-bold text-xs uppercase tracking-wide border border-gold-500/40">
+                Studio Buana Academy
+              </span>
+              <i data-lucide="building-2" class="w-5 h-5 text-gold-400"></i>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-xl text-white">
+              Kelas Privat Onsite di Studio
+            </h3>
+            
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Siswa datang langsung ke Studio Buana Academy di Bandung untuk pengalaman belajar tatap muka langsung, praktek transaksi uang mainan & games bisnis syariah.
+            </p>
+
+            <div class="space-y-2.5 pt-2 border-t border-emerald-800 text-xs text-emerald-100 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                <span>Tatap muka langsung bersama Astrid Nurul Falah, S.T., M.M.</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                <span>Paket Buku Fisik & Alat Peraga Wirausaha Cilik</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                <span>Roleplay Akad Jual Beli vs Akad Pinjaman</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-gold-400 shrink-0"></i>
+                <span>Sertifikat Kelulusan & Konsultasi Parenting</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-emerald-800 space-y-3">
+            <a href="https://wa.me/6281220000000?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20Kelas%20Privat%20Onsite%20di%20Studio%20Buana%20Academy" target="_blank" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-forest-dark font-heading font-extrabold py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-gold-500/20">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              <span>Daftar Onsite Studio</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 3: Webinar & Bedah Buku Series -->
+        <div class="bg-white rounded-3xl border-2 border-emerald-700/20 shadow-custom p-7 flex flex-col justify-between hover:border-emerald-600 transition-all badge-card">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-700 font-bold text-xs uppercase tracking-wide border border-purple-200">
+                Webinar & Bedah Buku
+              </span>
+              <i data-lucide="presentation" class="w-5 h-5 text-purple-600"></i>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-xl text-forest-dark">
+              Webinar & Bedah Buku 8 Seri
+            </h3>
+            
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Sesi interaktif daring membedah isi 8 Seri Buku <em>"Aku Cerdas Mengelola Uang"</em> untuk para orang tua, praktisi homeschooling, dan komunitas pendidikan.
+            </p>
+
+            <div class="space-y-2.5 pt-2 border-t border-gray-100 text-xs text-gray-700 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Kajian Fiqih Muamalat untuk Anak (Ust. Erwandi Tarmidzi)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Tanya Jawab Live Bersama Narasumber</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Rekaman Sesi & Modul Panduan Orang Tua</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Diskon Khusus Pre-Order 8 Buku Fisik</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-gray-100 space-y-3">
+            <a href="https://wa.me/6281220000000?text=Assalamu%27alaikum%2C%20saya%20ingin%20info%20Jadwal%20Webinar%20%26%20Bedah%20Buku%20Finance%20for%20Kids" target="_blank" class="w-full flex items-center justify-center gap-2 bg-forest hover:bg-forest-light text-white font-heading font-bold py-3 rounded-xl text-sm transition-colors shadow">
+              <span>Daftar Webinar Terdekat</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEARNING JOURNEY ROADMAP (Layout Section 7: Perjalanan Belajar 5 Langkah) -->
+  <section class="py-16 sm:py-20 bg-forest text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-card text-gold-300 text-xs font-bold uppercase tracking-wider border border-emerald-700/50">
+          <i data-lucide="milestone" class="w-3.5 h-3.5"></i>
+          <span>Roadmap Pembelajaran</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-white tracking-tight">
+          Perjalanan Belajar: Dari Mengenal Uang hingga Menolak Riba
+        </h2>
+        <p class="text-emerald-200 text-sm sm:text-base">
+          Disusun secara bertahap dan sistematis sehingga anak memahami esensi akad muamalat tanpa merasa digurui.
+        </p>
+      </div>
+
+      <!-- Roadmap Timeline Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-forest-card/90 p-5 rounded-2xl border border-emerald-700/60 flex flex-col justify-between space-y-3 relative">
+          <div class="space-y-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-400 text-forest-dark font-heading font-black text-sm">
+              01
+            </span>
+            <h3 class="font-heading font-bold text-base text-white">Kenal Rezeki & Uang Saku</h3>
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Memahami uang sebagai alat tukar dan titipan amanah Allah. Belajar bersyukur dan menabung sejak dini.
+            </p>
+          </div>
+          <div class="text-[11px] font-bold text-gold-300 border-t border-emerald-800 pt-2">
+            📘 Buku 1 & 2
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-forest-card/90 p-5 rounded-2xl border border-emerald-700/60 flex flex-col justify-between space-y-3 relative">
+          <div class="space-y-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-400 text-forest-dark font-heading font-black text-sm">
+              02
+            </span>
+            <h3 class="font-heading font-bold text-base text-white">Needs vs Wants & Budget</h3>
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Memfilter godaan belanja mainan/game. Menerapkan siklus <em>Plan - Do - Check - Improve</em>.
+            </p>
+          </div>
+          <div class="text-[11px] font-bold text-gold-300 border-t border-emerald-800 pt-2">
+            📘 Buku 3
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-forest-card/90 p-5 rounded-2xl border border-emerald-700/60 flex flex-col justify-between space-y-3 relative">
+          <div class="space-y-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-400 text-forest-dark font-heading font-black text-sm">
+              03
+            </span>
+            <h3 class="font-heading font-bold text-base text-white">Pengusaha Cilik Berkah</h3>
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Menghitung Modal, HPP, Harga Jual, dan Laba. Memahami bahwa keuntungan berasal dari usaha riil.
+            </p>
+          </div>
+          <div class="text-[11px] font-bold text-gold-300 border-t border-emerald-800 pt-2">
+            📘 Buku 4
+          </div>
+        </div>
+
+        <!-- Step 4 (Crucial Riba) -->
+        <div class="bg-gradient-to-b from-terracotta to-forest-card p-5 rounded-2xl border-2 border-gold-400/80 flex flex-col justify-between space-y-3 relative shadow-lg">
+          <div class="space-y-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-400 text-terracotta-dark font-heading font-black text-sm">
+              04
+            </span>
+            <h3 class="font-heading font-bold text-base text-white">⭐ Membongkar Rahasia Riba</h3>
+            <p class="text-xs text-amber-100 leading-relaxed">
+              Memahami QS. Al-Baqarah: 275. Mengapa bunga pinjaman diharamkan dan bahaya jerat uang instan.
+            </p>
+          </div>
+          <div class="text-[11px] font-bold text-gold-300 border-t border-white/20 pt-2">
+            📘 Buku 5 & 6 (Kunci!)
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-forest-card/90 p-5 rounded-2xl border border-emerald-700/60 flex flex-col justify-between space-y-3 relative">
+          <div class="space-y-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gold-400 text-forest-dark font-heading font-black text-sm">
+              05
+            </span>
+            <h3 class="font-heading font-bold text-base text-white">Bisnis Jujur & Ridha</h3>
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Etika muamalat: tidak menipu timbangan, amanah, dan mengintegrasikan <em>Earn-Spend-Save-Share-Halal</em>.
+            </p>
+          </div>
+          <div class="text-[11px] font-bold text-gold-300 border-t border-emerald-800 pt-2">
+            📘 Buku 7 & 8
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8 BOOKS SHOWCASE (Layout Section 8: Kurikulum 8 Seri Buku) -->
+  <section id="kurikulum" class="py-16 sm:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest text-gold-300 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="book-open-check" class="w-3.5 h-3.5"></i>
+          <span>Karya Seri Edukasi Buku</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-forest-dark tracking-tight">
+          Series: "AKU CERDAS MENGELOLA UANG"
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          8 Seri Buku Tipis (24–32 Halaman Berwarna) yang menyenangkan, mendidik, dan aplikatif untuk anak usia 6–15 tahun.
+        </p>
+      </div>
+
+      <!-- Books Grid (8 Books) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Book 1 -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-custom badge-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold text-[11px]">BOOK 1</span>
+              <span class="text-xs text-gray-400 font-medium">24 Hal</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-forest-dark">
+              "Dari Mana Uangku?"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-700">Tema: Mengenal Uang dan Rezeki</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Cerita anak yang mulai mendapat uang saku. Belajar uang sebagai amanah, kebutuhan vs keinginan, menabung, berbagi/sedekah, dan rasa syukur.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 bg-cream-soft p-2.5 rounded-xl">
+            <p class="text-[11px] text-forest italic font-medium">
+              💡 "Uang bukan hanya untuk dihabiskan. Uang perlu dikelola."
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-custom badge-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[11px]">BOOK 2</span>
+              <span class="text-xs text-gray-400 font-medium">28 Hal</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-forest-dark">
+              "Aku Punya Rencana!"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-700">Tema: Planning & Budgeting</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Tokoh mendapat Rp50.000 dan harus membaginya: kebutuhan, tabungan, berbagi, dan keinginan. Mengajarkan formula: PLAN → DO → CHECK → IMPROVE.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 bg-cream-soft p-2.5 rounded-xl">
+            <p class="text-[11px] text-forest italic font-medium">
+              💡 "Orang yang bijak tidak membiarkan uangnya pergi tanpa rencana."
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-custom badge-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 font-bold text-[11px]">BOOK 3</span>
+              <span class="text-xs text-gray-400 font-medium">28 Hal</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-forest-dark">
+              "Mau atau Butuh?"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-700">Tema: Needs vs Wants</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Cerita seru perdebatan karakter lucu 'Mau' dan 'Butuh' saat melihat mainan baru, snack, alat tulis lucu, game, dan sepatu baru.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 bg-cream-soft p-2.5 rounded-xl">
+            <p class="text-[11px] text-forest italic font-medium">
+              💡 "Apakah aku benar-benar membutuhkan barang ini sekarang?"
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-custom badge-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-bold text-[11px]">BOOK 4</span>
+              <span class="text-xs text-gray-400 font-medium">32 Hal</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-forest-dark">
+              "Aku Jadi Pengusaha Cilik"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-700">Tema: Entrepreneurship Syariah</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Mengenal rumus bisnis nyata: Modal → HPP → Harga Jual → Revenue → Profit. (Contoh: Modal roti Rp30.000, terjual Rp45.000, profit Rp15.000).
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 bg-cream-soft p-2.5 rounded-xl">
+            <p class="text-[11px] text-forest italic font-medium">
+              💡 "Keuntungan jual beli berbeda dengan tambahan dari utang."
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 5 (HIGHLIGHT RIBA) -->
+        <div class="bg-gradient-to-br from-forest-dark to-forest rounded-2xl border-2 border-gold-400 p-6 flex flex-col justify-between shadow-custom-lg text-white badge-card relative">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-gold-400 text-forest-dark font-black text-[11px]">⭐ BOOK 5 (INTI)</span>
+              <span class="text-xs text-gold-300 font-bold">32 Hal</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-lg text-gold-300">
+              "Kenapa Uangnya Harus Bertambah?"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-200">Tema: Introducing Riba (Kunci Series)</p>
+            <p class="text-xs text-gray-200 leading-relaxed">
+              Kasus: Pinjam Rp20.000 minta balik Rp25.000. Membedakan akad Jual Beli (barang/jasa) vs Utang Berbunga (uang + waktu).
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-emerald-700 bg-forest-card p-2.5 rounded-xl border border-gold-500/30">
+            <p class="text-[11px] text-gold-300 font-semibold leading-snug">
+              📖 "Allah menghalalkan jual beli dan mengharamkan riba." (QS. Al-Baqarah: 275)
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-custom badge-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[11px]">BOOK 6</span>
+              <span class="text-xs text-gray-400 font-medium">28 Hal</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-forest-dark">
+              "Jangan Tergiur Uang Cepat!"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-700">Tema: Bahaya Riba & Jebakan Finansial</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Bahasa ramah anak mengungkap ilusi uang mudah, kewajiban membayar utang bertambah, dan pentingnya tidak memanfaatkan kesulitan orang lain.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 bg-cream-soft p-2.5 rounded-xl">
+            <p class="text-[11px] text-forest italic font-medium">
+              💡 "Jangan mudah berutang dan jangan tergiur iming-iming instan."
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 7 -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-custom badge-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 font-bold text-[11px]">BOOK 7</span>
+              <span class="text-xs text-gray-400 font-medium">28 Hal</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-forest-dark">
+              "Jual Beli yang Jujur"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-700">Tema: Etika Bisnis Islam</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Menjawab pertanyaan anak: bagaimana mencari untung yang halal? Prinsip jujur, amanah, tidak menipu timbangan, dan asas ridha sama ridha.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 bg-cream-soft p-2.5 rounded-xl">
+            <p class="text-[11px] text-forest italic font-medium">
+              💡 "Carilah keuntungan berlimpah melalui cara yang halal & berkah."
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 8 -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-custom badge-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-bold text-[11px]">BOOK 8 (CLOSING)</span>
+              <span class="text-xs text-gray-400 font-medium">32 Hal</span>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-forest-dark">
+              "Uangku, Amanahku"
+            </h3>
+            <p class="text-xs font-semibold text-emerald-700">Tema: Integrasi Finansial Berkah</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Menyatukan seluruh siklus: Earn → Spend → Save → Share → Invest/Business → Avoid Riba menjadi gaya hidup muslim sejati.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-100 bg-cream-soft p-2.5 rounded-xl">
+            <p class="text-[11px] text-forest italic font-medium">
+              💡 "Berilmu dalam mengelola, halal mencari rezeki, berkah kehidupan."
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UNIVERSE OF CHARACTERS (Layout Section: 4 Sahabat) -->
+  <section id="karakter" class="py-16 bg-cream-soft border-t border-gray-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="users" class="w-3.5 h-3.5"></i>
+          <span>Universe Tokoh Cerita</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-forest-dark tracking-tight">
+          Bertemu dengan 4 Sahabat Cerdas Finansial
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Anak-anak tidak membaca buku teori kaku, melainkan mengikuti petualangan seru 4 sahabat dari Buku 1 hingga Buku 8!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Character 1: Ammar -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom text-center space-y-3 badge-card">
+          <div class="w-20 h-20 mx-auto rounded-full bg-blue-100 border-2 border-blue-400 flex items-center justify-center text-blue-700 text-3xl font-heading font-black">
+            👦
+          </div>
+          <h3 class="font-heading font-extrabold text-xl text-forest-dark">Ammar</h3>
+          <span class="inline-block px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 font-bold text-xs">
+            📊 Suka Berhitung & Angka
+          </span>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Sangat teliti dengan angka dan uang saku. Ammar selalu mencatat pemasukan dan pengeluaran dalam buku catatan kecilnya.
+          </p>
+        </div>
+
+        <!-- Character 2: Rafi -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom text-center space-y-3 badge-card">
+          <div class="w-20 h-20 mx-auto rounded-full bg-amber-100 border-2 border-amber-400 flex items-center justify-center text-amber-700 text-3xl font-heading font-black">
+            🎨
+          </div>
+          <h3 class="font-heading font-extrabold text-xl text-forest-dark">Rafi</h3>
+          <span class="inline-block px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 font-bold text-xs">
+            💡 Kreatif & Jiwa Bisnis
+          </span>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Penuh ide kreatif untuk membuat kerajinan dan jualan snack halal. Rafi adalah pengusaha cilik yang bersemangat mencari laba jujur.
+          </p>
+        </div>
+
+        <!-- Character 3: Naila -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom text-center space-y-3 badge-card">
+          <div class="w-20 h-20 mx-auto rounded-full bg-emerald-100 border-2 border-emerald-400 flex items-center justify-center text-emerald-700 text-3xl font-heading font-black">
+            🧕
+          </div>
+          <h3 class="font-heading font-extrabold text-xl text-forest-dark">Naila</h3>
+          <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-bold text-xs">
+            🌱 Rajin Menabung & Dermawan
+          </span>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Paling disiplin menyisihkan uang saku untuk celengan dan gemar bersedekah kepada teman-teman yang membutuhkan.
+          </p>
+        </div>
+
+        <!-- Character 4: Maryam -->
+        <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-custom text-center space-y-3 badge-card">
+          <div class="w-20 h-20 mx-auto rounded-full bg-rose-100 border-2 border-rose-400 flex items-center justify-center text-rose-700 text-3xl font-heading font-black">
+            🔍
+          </div>
+          <h3 class="font-heading font-extrabold text-xl text-forest-dark">Maryam</h3>
+          <span class="inline-block px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 font-bold text-xs">
+            🤔 Kritis & Banyak Tanya
+          </span>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            Selalu penasaran: <em>"Kenapa harganya beda?", "Kenapa utang ada bunganya?"</em>. Pertanyaan kritis Maryam membongkar konsep riba!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEAD INSTRUCTOR PROFILE (Layout Section: Profil Pengajar Utama) -->
+  <section id="pengajar" class="py-16 sm:py-24 bg-forest-dark text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-forest-card rounded-3xl border border-emerald-700/60 p-8 sm:p-12 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Instructor Avatar / Profile Col -->
+          <div class="lg:col-span-4 text-center lg:text-left space-y-4">
+            <div class="relative inline-block mx-auto lg:mx-0">
+              <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-gradient-to-tr from-brand-600 via-emerald-700 to-gold-400 p-1 shadow-2xl">
+                <div class="w-full h-full rounded-[22px] bg-forest-dark flex flex-col items-center justify-center text-gold-300">
+                  <i data-lucide="user-round" class="w-16 h-16 sm:w-20 sm:h-20 text-emerald-400 mb-1"></i>
+                  <span class="text-xs font-heading font-bold text-white">Buana Faculty</span>
+                </div>
+              </div>
+              <div class="absolute -bottom-3 -right-2 bg-gold-500 text-forest-dark font-heading font-black text-xs px-3 py-1 rounded-full shadow border-2 border-forest-dark">
+                Lead Host / Tutor
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <h3 class="text-2xl font-heading font-bold text-white">Astrid Nurul Falah, S.T., M.M.</h3>
+              <p class="text-gold-300 font-semibold text-sm">Pakar Keuangan & Pendidik Anak</p>
+              <p class="text-xs text-emerald-300">Magister Manajemen Keuangan (MM Finance) Universitas Padjadjaran</p>
+            </div>
+          </div>
+
+          <!-- Credentials & Bio Col -->
+          <div class="lg:col-span-8 space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-bold uppercase tracking-wider mb-2">
+                <i data-lucide="award" class="w-4 h-4"></i>
+                <span>Profil Pengajar Utama</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-white">
+                Dedikasi Membumikan Literasi Keuangan Syariah untuk Generasi Muda
+              </h2>
+            </div>
+
+            <p class="text-emerald-200 text-sm sm:text-base leading-relaxed">
+              <strong>Astrid Nurul Falah, S.T., M.M.</strong> adalah lulusan <em>Magister Management of Finance</em> dari Universitas Padjadjaran (UNPAD) yang memadukan latar belakang analisis keuangan modern dengan pemahaman fiqih muamalat Islam.
+            </p>
+
+            <!-- Experience highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+              <div class="bg-forest-dark/80 p-4 rounded-xl border border-emerald-800 space-y-1">
+                <div class="flex items-center gap-2 text-gold-300 font-bold">
+                  <i data-lucide="clock" class="w-4 h-4 text-gold-400"></i>
+                  <span>±7 Tahun Pengalaman Mengajar</span>
+                </div>
+                <p class="text-emerald-200 text-xs">
+                  Mengajar bidang Ekonomi dan Bahasa Inggris di seluruh jenjang: Primary School (SD), Junior High (SMP), dan Senior High School (SMA).
+                </p>
+              </div>
+
+              <div class="bg-forest-dark/80 p-4 rounded-xl border border-emerald-800 space-y-1">
+                <div class="flex items-center gap-2 text-gold-300 font-bold">
+                  <i data-lucide="school" class="w-4 h-4 text-brand-400"></i>
+                  <span>6 Tahun di PKBM Baitul Muttaqin</span>
+                </div>
+                <p class="text-emerald-200 text-xs">
+                  Mendampingi ratusan anak homeschooling dalam penguatan logika ekonomi, kewirausahaan, dan keterampilan hidup mandiri.
+                </p>
+              </div>
+
+              <div class="bg-forest-dark/80 p-4 rounded-xl border border-emerald-800 space-y-1 sm:col-span-2">
+                <div class="flex items-center gap-2 text-gold-300 font-bold">
+                  <i data-lucide="book-marked" class="w-4 h-4 text-emerald-400"></i>
+                  <span>1 Tahun di SD At-Tibyan Bandung Quranic School</span>
+                </div>
+                <p class="text-emerald-200 text-xs">
+                  Mengembangkan metode interaktif ramah anak berbasis adab Al-Qur'an dan nilai-nilai keberkahan rezeki.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-forest-dark border-l-4 border-gold-400 text-xs text-emerald-200">
+              <em>"Misi kami adalah memastikan anak-anak kita tidak hanya pintar mencari uang, tapi berilmu dalam mengelolanya, jujur dalam bertransaksi, dan memiliki benteng kuat dari jerat riba."</em>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION SECTION (Layout Section: Tanya Jawab Penting) -->
+  <section id="faq" class="py-16 sm:py-20 bg-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest text-gold-300 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>FAQ Program</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-heading font-extrabold text-forest-dark tracking-tight">
+          Pertanyaan yang Sering Diajukan
+        </h2>
+        <p class="text-gray-600 text-sm">
+          Informasi lengkap seputar metode les privat, webinar, pemesanan buku, dan lokasi studio.
+        </p>
+      </div>
+
+      <!-- Accordion Items -->
+      <div class="space-y-4" id="faq-container">
+        
+        <!-- Q1 -->
+        <div class="bg-white rounded-2xl border border-gray-200/90 shadow-sm overflow-hidden transition-all">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center gap-4 text-forest-dark font-heading font-bold text-base focus:outline-none faq-btn">
+            <span>1. Apakah tutor bisa datang ke rumah saya (les privat door-to-door)?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-700 transition-transform faq-icon shrink-0"></i>
+          </button>
+          <div class="px-6 pb-5 text-xs sm:text-sm text-gray-600 leading-relaxed hidden faq-content">
+            <p><strong>Tidak.</strong> Demi standarisasi kurikulum, kenyamanan, dan ketersediaan alat peraga interaktif, kami <strong>hanya menyediakan 2 metode</strong>:</p>
+            <ul class="list-disc ml-5 mt-2 space-y-1">
+              <li><strong>Online Interaktif:</strong> Via Zoom atau Google Meet (bisa diakses dari kota/daerah manapun).</li>
+              <li><strong>Offline Tatap Muka:</strong> Siswa dan orang tua datang langsung ke Studio Buana Academy di Bandung.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="bg-white rounded-2xl border border-gray-200/90 shadow-sm overflow-hidden transition-all">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center gap-4 text-forest-dark font-heading font-bold text-base focus:outline-none faq-btn">
+            <span>2. Berapa usia anak yang cocok mengikuti program ini?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-700 transition-transform faq-icon shrink-0"></i>
+          </button>
+          <div class="px-6 pb-5 text-xs sm:text-sm text-gray-600 leading-relaxed hidden faq-content">
+            Program dan 8 Seri Buku ini dirancang optimal untuk anak usia <strong>6 hingga 15 tahun</strong> (tingkat SD dan SMP), serta anak-anak dari keluarga <em>homeschooling</em>. Materi disajikan bertingkat dari konsep dasar uang saku hingga simulasi bisnis dan pemahaman akad syariah.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="bg-white rounded-2xl border border-gray-200/90 shadow-sm overflow-hidden transition-all">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center gap-4 text-forest-dark font-heading font-bold text-base focus:outline-none faq-btn">
+            <span>3. Apa dasar rujukan syariah yang digunakan dalam materi?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-700 transition-transform faq-icon shrink-0"></i>
+          </button>
+          <div class="px-6 pb-5 text-xs sm:text-sm text-gray-600 leading-relaxed hidden faq-content">
+            Seluruh kurikulum, buku, dan studi kasus disusun mengacu pada kaidah Fiqih Muamalat Kontemporer yang dirumuskan oleh <strong>Dr. Erwandi Tarmidzi, M.A.</strong> (pakar fiqih muamalat internasional), disederhanakan dengan bahasa ramah anak, dialog karakter, dan visual ilustratif.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="bg-white rounded-2xl border border-gray-200/90 shadow-sm overflow-hidden transition-all">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center gap-4 text-forest-dark font-heading font-bold text-base focus:outline-none faq-btn">
+            <span>4. Bagaimana cara membeli paket 8 Seri Buku "Aku Cerdas Mengelola Uang"?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-700 transition-transform faq-icon shrink-0"></i>
+          </button>
+          <div class="px-6 pb-5 text-xs sm:text-sm text-gray-600 leading-relaxed hidden faq-content">
+            Buku dapat dipesan secara satuan maupun paket bundling 8 buku lengkap. Anda dapat menghubungi admin kami melalui WhatsApp dengan menekan tombol <strong>"Pesan Buku / Daftar"</strong> di halaman ini untuk mendapatkan penawaran pre-order spesial dan pengiriman ke seluruh Indonesia.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="bg-white rounded-2xl border border-gray-200/90 shadow-sm overflow-hidden transition-all">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center gap-4 text-forest-dark font-heading font-bold text-base focus:outline-none faq-btn">
+            <span>5. Apakah Buana Academy menerima undangan webinar untuk komunitas / sekolah?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-700 transition-transform faq-icon shrink-0"></i>
+          </button>
+          <div class="px-6 pb-5 text-xs sm:text-sm text-gray-600 leading-relaxed hidden faq-content">
+            <strong>Ya, sangat bisa.</strong> Kami sering mengadakan sesi webinar dan workshop khusus komunitas homeschooling, parenting club, maupun institusi sekolah Islam (SD & SMP) bersama Astrid Nurul Falah, S.T., M.M. Silakan hubungi tim kami untuk mendiskusikan jadwal dan tema yang dibutuhkan.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA BANNER (Layout Section: Terracotta / Warm Action Box) -->
+  <section class="py-16 bg-gradient-to-r from-terracotta-dark via-terracotta to-terracotta-light text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-repeat" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/20 text-gold-300 text-xs sm:text-sm font-bold border border-gold-400/30">
+        <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+        <span>Investasi Terbaik untuk Akhirat & Masa Depan Buah Hati</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
+        Lindungi Anak dari Bahaya Riba, <br class="hidden sm:inline"/>
+        Tumbuhkan Generasi Berkah Finansial!
+      </h2>
+
+      <p class="text-white/90 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Daftarkan anak Anda di kelas privat online/offline studio Buana Academy, atau dapatkan seri lengkap buku <em>"Aku Cerdas Mengelola Uang"</em> sekarang juga.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <a href="https://wa.me/6281220000000?text=Assalamu%27alaikum%20Admin%20Buana%20Academy%2C%20saya%20ingin%20mendaftarkan%20anak%20saya%20untuk%20Program%20Finance%20for%20Kids" target="_blank" class="inline-flex items-center gap-2.5 bg-gold-400 hover:bg-gold-300 text-forest-dark font-heading font-black text-base px-8 py-4 rounded-full shadow-2xl shadow-black/30 transition-all transform hover:-translate-y-1">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Hubungi Admin Buana via WhatsApp</span>
+        </a>
+        <a href="#kurikulum" class="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white font-heading font-bold text-base px-7 py-4 rounded-full border border-white/30 transition-all">
+          <i data-lucide="book-open" class="w-5 h-5"></i>
+          <span>Lihat Detail 8 Buku</span>
+        </a>
+      </div>
+
+      <div class="text-xs text-white/75 pt-2">
+        📍 Studio: Buana Academy, Bandung | 🌐 Kelas Online: Zoom & Google Meet Seluruh Indonesia
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER (Layout Section: Footer Eduosmo Style) -->
+  <footer class="bg-forest-dark text-emerald-200 pt-14 pb-10 border-t border-emerald-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-gold-400 flex items-center justify-center text-white font-heading font-black text-xl shadow-lg">
+              B
+            </div>
+            <div>
+              <span class="text-white font-heading font-bold text-xl tracking-tight">Buana Academy</span>
+              <p class="text-gold-400 text-xs">Islamic Financial Literacy for Kids</p>
+            </div>
+          </div>
+          
+          <p class="text-xs text-emerald-300/80 leading-relaxed">
+            Program les privat, webinar, dan penerbitan seri buku edukasi keuangan syariah anak. Menanamkan prinsip muamalat halal, anti-riba, dan mental wirausaha berkah sejak usia dini.
+          </p>
+
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://wa.me/6281220000000" class="w-8 h-8 rounded-lg bg-emerald-900/80 hover:bg-gold-500 hover:text-forest-dark flex items-center justify-center transition-colors text-emerald-200">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:info@buana.studio" class="w-8 h-8 rounded-lg bg-emerald-900/80 hover:bg-gold-500 hover:text-forest-dark flex items-center justify-center transition-colors text-emerald-200">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <a href="http://academy.buana.studio" class="w-8 h-8 rounded-lg bg-emerald-900/80 hover:bg-gold-500 hover:text-forest-dark flex items-center justify-center transition-colors text-emerald-200">
+              <i data-lucide="globe" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Program Links -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-white font-heading font-bold text-sm uppercase tracking-wider">Program Belajar</h4>
+          <ul class="space-y-2 text-xs text-emerald-300">
+            <li><a href="#program" class="hover:text-gold-400 transition-colors">Kelas Privat 1-on-1 Online (Zoom/GMeet)</a></li>
+            <li><a href="#program" class="hover:text-gold-400 transition-colors">Kelas Tatap Muka di Studio Buana</a></li>
+            <li><a href="#program" class="hover:text-gold-400 transition-colors">Webinar & Bedah Buku Seri</a></li>
+            <li><a href="#program" class="hover:text-gold-400 transition-colors">Workshop Komunitas Homeschooling</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400 transition-colors">Pre-Order Paket 8 Seri Buku Fisik</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Kurikulum Seri Buku -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-white font-heading font-bold text-sm uppercase tracking-wider">8 Seri Buku Edukasi</h4>
+          <ul class="space-y-1.5 text-xs text-emerald-300">
+            <li><a href="#kurikulum" class="hover:text-gold-400">Book 1: Dari Mana Uangku?</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400">Book 2: Aku Punya Rencana!</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400">Book 3: Mau atau Butuh?</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400">Book 4: Aku Jadi Pengusaha Cilik</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400 text-gold-300 font-semibold">Book 5: ⭐ Kenapa Uangnya Harus Bertambah?</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400">Book 6: Jangan Tergiur Uang Cepat!</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400">Book 7: Jual Beli yang Jujur</a></li>
+            <li><a href="#kurikulum" class="hover:text-gold-400">Book 8: Uangku, Amanahku</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Host & Reference -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-white font-heading font-bold text-sm uppercase tracking-wider">Landasan & Tutor</h4>
+          <div class="text-xs text-emerald-300 space-y-2">
+            <p><strong>Pengajar Utama:</strong><br/>Astrid Nurul Falah, S.T., M.M. (MM Finance UNPAD)</p>
+            <p><strong>Rujukan Muamalat:</strong><br/>Ust. Dr. Erwandi Tarmidzi, M.A.</p>
+            <p><strong>Website Resmi:</strong><br/><span class="text-gold-300">academy.buana.studio/finance</span></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & GitHub Pages attribution -->
+      <div class="border-t border-emerald-900 pt-6 flex flex-wrap justify-between items-center gap-4 text-xs text-emerald-400/80">
+        <div>
+          © 2026 Buana Academy. All Rights Reserved. Hosted on GitHub Pages.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#beranda" class="hover:text-gold-400">Kembali ke Atas ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button (Mobile Friendly) -->
+  <div class="fixed bottom-5 right-5 z-50">
+    <a href="https://wa.me/6281220000000?text=Assalamu%27alaikum%20Admin%20Buana%20Academy%2C%20saya%20ingin%20konsultasi%20Program%20Finance%20for%20Kids" target="_blank" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold px-4 py-3 rounded-full shadow-2xl border-2 border-white transition-all transform hover:scale-105" aria-label="Chat WhatsApp">
+      <i data-lucide="message-circle" class="w-5 h-5"></i>
+      <span class="hidden sm:inline text-sm">Konsultasi WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // FAQ Accordion Toggle
+    const faqButtons = document.querySelectorAll('.faq-btn');
+
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isExpanded = !content.classList.contains('hidden');
+
+        // Close all other FAQs
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+        // Toggle current
+        if (!isExpanded) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
